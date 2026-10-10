@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HomeFirst Roofing | San Antonio's Trusted Roofers | 30+ Years Experience</title>
-  <meta name="description" content="HomeFirst Roofing in San Antonio, TX. Over 30 combined years of roofing experience led by Abraham Cruz. Honest hail & storm restoration, residential roof replacements, and free 21-point drone inspections.">
+  <meta name="description" content="San Antonio's trusted roofing contractor. Led by local community leader Abraham Cruz with 30+ combined years of crew experience. Lifetime workmanship warranties, GAF & Owens Corning certified, free 21-point drone inspections.">
   
   <!-- Favicon & Brand Icons -->
   <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
@@ -13,7 +13,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
   
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -49,8 +49,8 @@
   <style>
     /* Smoky Overlays and Crisp Gloss Depth */
     .hero-bg {
-      background: linear-gradient(180deg, rgba(3, 12, 23, 0.84) 0%, rgba(11, 37, 70, 0.88) 45%, rgba(6, 22, 41, 0.98) 100%),
-                  radial-gradient(circle at 80% 20%, rgba(199, 83, 43, 0.38) 0%, transparent 55%),
+      background: linear-gradient(180deg, rgba(3, 12, 23, 0.82) 0%, rgba(11, 37, 70, 0.88) 45%, rgba(6, 22, 41, 0.98) 100%),
+                  radial-gradient(circle at 80% 20%, rgba(199, 83, 43, 0.35) 0%, transparent 55%),
                   radial-gradient(circle at 15% 85%, rgba(11, 55, 105, 0.55) 0%, transparent 60%),
                   url('assets/golden-hour-crew.jpg') center/cover no-repeat;
     }
@@ -80,6 +80,28 @@
       box-shadow: 0 25px 50px -12px rgba(199, 83, 43, 0.28), inset 0 1px 2px 0 rgba(255, 255, 255, 0.4);
       transform: translateY(-3px);
       transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Authority Service Card (Rhino / Bondoc Inspired) */
+    .authority-card {
+      position: relative;
+      border-radius: 1.25rem;
+      overflow: hidden;
+      background: rgba(11, 28, 51, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.6);
+      transition: all 0.35s ease;
+    }
+    .authority-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(199, 83, 43, 0.6);
+      box-shadow: 0 25px 45px -10px rgba(199, 83, 43, 0.3);
+    }
+    .authority-card .img-zoom {
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .authority-card:hover .img-zoom {
+      transform: scale(1.08);
     }
 
     /* Image Gloss Stamp Card */
@@ -198,33 +220,47 @@
 
 <body class="bg-brand-navyDeep text-slate-100 font-sans antialiased selection:bg-brand-orange selection:text-white bg-watermark">
 
-  <!-- ==================== TOP EMERGENCY & HAIL ALERT BAR ==================== -->
-  <div class="bg-gradient-to-r from-brand-navyDark via-brand-navy to-brand-navyDark border-b border-white/10 py-2.5 px-4 text-xs sm:text-sm text-slate-200">
+  <!-- ==================== RHINO & BONDOC STYLE: HIGH-AUTHORITY TOP BAR ==================== -->
+  <div class="bg-gradient-to-r from-brand-navyDeep via-brand-navyDark to-brand-navyDeep border-b border-white/10 py-2.5 px-4 text-xs font-medium text-slate-200">
     <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
-      <div class="flex items-center gap-2">
-        <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-brand-orange/20 text-brand-orange border border-brand-orange/40 animate-pulse">
-          <i class="fa-solid fa-cloud-bolt mr-1"></i> San Antonio Hail Watch
-        </span>
-        <span class="hidden sm:inline text-slate-300">Bexar & Hill Country storm response team on standby. Free 21-point drone inspections available today.</span>
+      
+      <!-- Left: Google Reviews & BBB Status (Bondoc / Rhino Style) -->
+      <div class="flex items-center gap-3 sm:gap-6 flex-wrap">
+        <div class="flex items-center gap-1.5 text-amber-400">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <span class="text-white font-bold ml-1">4.9 / 5.0</span>
+          <span class="text-slate-400 hidden sm:inline">(350+ Verified San Antonio Reviews)</span>
+        </div>
+        <div class="hidden md:flex items-center gap-1.5 text-slate-300">
+          <span class="px-1.5 py-0.5 rounded bg-blue-500/20 text-blue-300 font-extrabold text-[10px] border border-blue-500/40">BBB A+</span>
+          <span>Accredited Local Business</span>
+        </div>
       </div>
-      <div class="flex items-center gap-4 text-xs font-medium ml-auto">
-        <span class="hidden md:inline-flex items-center text-slate-400">
-          <i class="fa-solid fa-shield-halved text-brand-orange mr-1.5"></i> 100% Fully Insured & Bonded
+
+      <!-- Right: Direct Phone & Hours -->
+      <div class="flex items-center gap-4 text-xs font-semibold ml-auto">
+        <span class="hidden lg:inline text-slate-400">
+          <i class="fa-solid fa-clock text-brand-orange mr-1"></i> Mon–Sat: 7AM–7PM | 24/7 Storm Dispatch
         </span>
-        <a href="tel:2105557663" class="inline-flex items-center text-brand-orange hover:text-white font-bold transition">
-          <i class="fa-solid fa-phone-volume mr-1.5"></i> Direct Crew Line: (210) 555-ROOF
+        <a href="tel:2105557663" class="inline-flex items-center text-brand-orange hover:text-white font-black text-sm tracking-wide transition">
+          <i class="fa-solid fa-phone-volume mr-2 animate-bounce"></i> (210) 555-ROOF (7663)
         </a>
       </div>
+
     </div>
   </div>
 
   <!-- ==================== STICKY GLOSSY HEADER ==================== -->
-  <header class="sticky top-0 z-50 bg-brand-navyDark/90 backdrop-blur-xl border-b border-white/10 transition-all shadow-xl shadow-black/40">
+  <header class="sticky top-0 z-50 bg-brand-navyDark/95 backdrop-blur-xl border-b border-white/10 transition-all shadow-2xl">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
-      <!-- Brand Logo Mark (Enhanced Awareness) -->
+      <!-- Brand Logo Mark -->
       <a href="#" class="flex items-center gap-3.5 group">
-        <div class="w-13 h-13 p-1.5 rounded-2xl bg-gradient-to-br from-white via-slate-100 to-slate-200 shadow-xl shadow-brand-orange/20 flex items-center justify-center border-2 border-brand-orange/40 transition-all group-hover:scale-105 group-hover:border-brand-orange">
+        <div class="w-13 h-13 p-1.5 rounded-2xl bg-white shadow-xl shadow-brand-orange/20 flex items-center justify-center border-2 border-brand-orange/40 transition-all group-hover:scale-105 group-hover:border-brand-orange">
           <img src="assets/logo.svg" alt="HomeFirst Roofing Logo Mark" class="w-10 h-10 object-contain">
         </div>
         <div class="flex flex-col">
@@ -237,16 +273,16 @@
       </a>
 
       <!-- Desktop Navigation Links -->
-      <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300">
+      <nav class="hidden xl:flex items-center gap-8 text-sm font-semibold text-slate-200">
+        <a href="#services" class="hover:text-brand-orange transition">Services</a>
         <a href="#projects" class="hover:text-brand-orange transition flex items-center gap-1.5">
-          <span>Field Projects</span>
+          <span>Field Gallery</span>
           <span class="px-1.5 py-0.2 rounded text-[10px] bg-brand-orange text-white font-bold">10 Photos</span>
         </a>
-        <a href="#logo-story" class="hover:text-brand-orange transition">The Logo Story</a>
-        <a href="#services" class="hover:text-brand-orange transition">Services</a>
+        <a href="#process" class="hover:text-brand-orange transition">How We Work</a>
         <a href="#estimator" class="hover:text-brand-orange transition">Cost Estimator</a>
-        <a href="#about-abraham" class="hover:text-brand-orange transition">Abraham & Crew</a>
-        <a href="#comparison" class="hover:text-brand-orange transition">Why Us</a>
+        <a href="#reviews" class="hover:text-brand-orange transition">Reviews</a>
+        <a href="#about-abraham" class="hover:text-brand-orange transition">Meet Abraham</a>
         <a href="#faq" class="hover:text-brand-orange transition">FAQ</a>
       </nav>
 
@@ -254,24 +290,24 @@
       <div class="hidden sm:flex items-center gap-4">
         <a href="#estimate-form" class="btn-gloss-orange text-white px-5 py-2.5 rounded-xl font-bold text-sm tracking-wide flex items-center gap-2">
           <i class="fa-solid fa-clipboard-check"></i>
-          <span>Free 21-Point Inspection</span>
+          <span>Schedule Free Inspection</span>
         </a>
       </div>
 
       <!-- Mobile Menu Button -->
-      <button id="mobileMenuBtn" class="lg:hidden text-white p-2 focus:outline-none" aria-label="Toggle Menu">
+      <button id="mobileMenuBtn" class="xl:hidden text-white p-2 focus:outline-none" aria-label="Toggle Menu">
         <i class="fa-solid fa-bars text-xl"></i>
       </button>
     </div>
 
     <!-- Mobile Dropdown -->
-    <div id="mobileMenu" class="hidden lg:hidden bg-brand-navyDark border-b border-white/10 px-6 py-5 space-y-4">
-      <a href="#projects" class="block text-slate-200 hover:text-brand-orange font-medium">Field Projects (10 Photos)</a>
-      <a href="#logo-story" class="block text-slate-200 hover:text-brand-orange font-medium">The Logo Story & Flashing Standards</a>
-      <a href="#services" class="block text-slate-200 hover:text-brand-orange font-medium">Services</a>
+    <div id="mobileMenu" class="hidden xl:hidden bg-brand-navyDark border-b border-white/10 px-6 py-5 space-y-4">
+      <a href="#services" class="block text-slate-200 hover:text-brand-orange font-medium">Roofing Services</a>
+      <a href="#projects" class="block text-slate-200 hover:text-brand-orange font-medium">Field Projects Gallery (10 Photos)</a>
+      <a href="#process" class="block text-slate-200 hover:text-brand-orange font-medium">The 4-Step HomeFirst Process</a>
       <a href="#estimator" class="block text-slate-200 hover:text-brand-orange font-medium">Interactive Cost Estimator</a>
+      <a href="#reviews" class="block text-slate-200 hover:text-brand-orange font-medium">Homeowner Reviews</a>
       <a href="#about-abraham" class="block text-slate-200 hover:text-brand-orange font-medium">Meet Abraham Cruz & Team</a>
-      <a href="#comparison" class="block text-slate-200 hover:text-brand-orange font-medium">Storm Chasers vs. HomeFirst</a>
       <a href="#faq" class="block text-slate-200 hover:text-brand-orange font-medium">Frequently Asked Questions</a>
       <a href="#estimate-form" class="w-full text-center btn-gloss-orange text-white py-3 rounded-xl font-bold block">
         Free 21-Point Inspection
@@ -279,8 +315,8 @@
     </div>
   </header>
 
-  <!-- ==================== HERO SECTION: CRISP & SMOKY DEPTH ==================== -->
-  <section class="relative hero-bg pt-16 pb-24 lg:pt-24 lg:pb-36 overflow-hidden">
+  <!-- ==================== HERO SECTION: PROVEN RHINO / BONDOC HIGH-CONVERSION SPLIT ==================== -->
+  <section class="relative hero-bg pt-14 pb-20 lg:pt-20 lg:pb-32 overflow-hidden">
     <!-- Ambient glowing accents -->
     <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-brand-orange/20 rounded-full blur-[140px] pointer-events-none"></div>
     <div class="absolute bottom-10 left-10 w-[500px] h-[300px] bg-brand-navyLight/25 rounded-full blur-[120px] pointer-events-none"></div>
@@ -288,72 +324,72 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
         
-        <!-- Left Hero Copy -->
+        <!-- Left Hero Column: Big Authority Message -->
         <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
           
-          <!-- Experience & Logo Badge -->
+          <!-- Experience & Credibility Badge -->
           <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full badge-chip text-xs sm:text-sm font-semibold text-slate-200 shadow-inner">
             <img src="assets/logo.svg" alt="HF" class="w-4 h-4 object-contain">
-            <span class="text-white font-bold">30+ Combined Years</span>
+            <span class="text-white font-bold">San Antonio Born & Owned</span>
             <span class="text-slate-400">|</span>
-            <span class="text-slate-300">San Antonio Roots, Craftsmanship That Endures</span>
+            <span class="text-brand-orange font-bold">30+ Combined Years Experience</span>
           </div>
 
-          <!-- Main Heading -->
+          <!-- Main Heavyweight Headline -->
           <h1 class="font-display font-black text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-[1.12]">
-            Roofs Built to Protect What Matters Most. <br>
+            San Antonio's Trusted <br>
             <span class="bg-gradient-to-r from-brand-orange via-orange-400 to-amber-300 bg-clip-text text-transparent">
-              Honest. Local. Guaranteed.
+              Roof Replacement & Hail Specialists
             </span>
           </h1>
 
-          <!-- Value Statement -->
+          <!-- Value Proposition Statement -->
           <p class="text-lg sm:text-xl text-slate-300 max-w-2xl font-normal leading-relaxed mx-auto lg:mx-0">
-            Founded by San Antonio native <strong class="text-white">Abraham Cruz</strong>, HomeFirst Roofing pairs over three decades of South Texas roofing mastery with honest, transparent advice. No out-of-town storm chasers—just neighbor-to-neighbor integrity.
+            Craftsmanship engineered to withstand South Texas hail, wind, and 105°F heat. Founded by local community leader <strong class="text-white">Abraham Cruz</strong>, our master crew delivers 1-day installs, transferable lifetime warranties, and zero high-pressure sales.
           </p>
 
           <!-- CTAs -->
           <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
             <a href="#estimate-form" class="btn-gloss-orange text-white px-8 py-4 rounded-xl font-extrabold text-base tracking-wide flex items-center justify-center gap-3">
               <i class="fa-solid fa-drone text-lg"></i>
-              <span>Schedule Free Inspection</span>
+              <span>Book Free 21-Point Drone Scan</span>
             </a>
-            <a href="#projects" class="gloss-card text-white hover:text-brand-orange px-7 py-4 rounded-xl font-bold text-base flex items-center justify-center gap-2.5 transition">
-              <i class="fa-solid fa-camera-retro text-brand-orange"></i>
-              <span>View 10 Field Projects</span>
+            <a href="tel:2105557663" class="gloss-card text-white hover:text-brand-orange px-7 py-4 rounded-xl font-bold text-base flex items-center justify-center gap-2.5 transition">
+              <i class="fa-solid fa-phone text-brand-orange"></i>
+              <span>(210) 555-ROOF</span>
             </a>
           </div>
 
-          <!-- Trust Badges Bar with Brand Standards -->
+          <!-- Major Accreditations Row (Rhino / Bondoc style) -->
           <div class="pt-6 border-t border-white/10 grid grid-cols-3 gap-4 max-w-lg mx-auto lg:mx-0 text-left">
             <div class="flex items-start gap-2.5">
-              <i class="fa-solid fa-certificate text-brand-orange mt-1"></i>
+              <i class="fa-solid fa-award text-brand-orange mt-1 text-lg"></i>
               <div>
-                <p class="text-white font-bold text-sm">GAF & Owens</p>
-                <p class="text-xs text-slate-400">Preferred Installers</p>
+                <p class="text-white font-bold text-sm">Lifetime Warranty</p>
+                <p class="text-xs text-slate-400">100% Transferable</p>
               </div>
             </div>
             <div class="flex items-start gap-2.5">
-              <i class="fa-solid fa-file-shield text-brand-orange mt-1"></i>
+              <i class="fa-solid fa-file-shield text-brand-orange mt-1 text-lg"></i>
               <div>
                 <p class="text-white font-bold text-sm">Fully Insured</p>
                 <p class="text-xs text-slate-400">Liability & Worker's Comp</p>
               </div>
             </div>
             <div class="flex items-start gap-2.5">
-              <i class="fa-solid fa-handshake-angle text-brand-orange mt-1"></i>
+              <i class="fa-solid fa-certificate text-brand-orange mt-1 text-lg"></i>
               <div>
-                <p class="text-white font-bold text-sm">HB 2102 Legal</p>
-                <p class="text-xs text-slate-400">100% Ethical Claims</p>
+                <p class="text-white font-bold text-sm">Preferred Master</p>
+                <p class="text-xs text-slate-400">GAF & Owens Corning</p>
               </div>
             </div>
           </div>
 
         </div>
 
-        <!-- Right Hero Floating Card: Instant Hail & Inspection Widget -->
+        <!-- Right Hero Column: Fast-Track Free Inspection Card (Rhino / Bondoc style lead engine) -->
         <div class="lg:col-span-5">
-          <div class="gloss-card rounded-2xl p-6 sm:p-8 crisp-rim-orange relative">
+          <div class="gloss-card rounded-3xl p-6 sm:p-8 crisp-rim-orange relative shadow-2xl">
             
             <div class="flex items-center justify-between pb-4 border-b border-white/10">
               <div class="flex items-center gap-3">
@@ -361,8 +397,8 @@
                   <img src="assets/logo.svg" alt="HomeFirst Crest" class="w-full h-full object-contain">
                 </div>
                 <div>
-                  <h3 class="text-white font-bold text-base">San Antonio Fast-Track</h3>
-                  <p class="text-xs text-slate-400">Free, no-obligation written assessment</p>
+                  <h3 class="text-white font-bold text-lg">Get An Instant Quote</h3>
+                  <p class="text-xs text-slate-400">100% Free Drone & Photo Assessment</p>
                 </div>
               </div>
               <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 flex items-center gap-1.5">
@@ -370,10 +406,10 @@
               </span>
             </div>
 
-            <!-- Mini Form inside hero -->
+            <!-- Instant Booking Form -->
             <form id="heroQuickForm" class="mt-5 space-y-4">
               <div>
-                <label class="block text-xs font-medium text-slate-300 mb-1">Your Property Address / Zip Code</label>
+                <label class="block text-xs font-semibold text-slate-300 mb-1">Your Property Address or Zip Code</label>
                 <div class="relative">
                   <i class="fa-solid fa-location-dot absolute left-3.5 top-3.5 text-slate-400 text-sm"></i>
                   <input type="text" required placeholder="e.g. 1240 Alamo Heights Blvd, 78209" 
@@ -382,12 +418,12 @@
               </div>
 
               <div>
-                <label class="block text-xs font-medium text-slate-300 mb-1">What can we help you solve?</label>
+                <label class="block text-xs font-semibold text-slate-300 mb-1">Service Needed</label>
                 <select class="w-full bg-slate-900/80 border border-white/15 rounded-xl px-3.5 py-3 text-sm text-white focus:outline-none focus:border-brand-orange transition">
                   <option>Recent Hail or Storm Damage Inspection</option>
-                  <option>Active Leak / Emergency Repair</option>
-                  <option>Full Roof Replacement Estimate</option>
-                  <option>Standing Seam Metal Roof Consultation</option>
+                  <option>Full Residential Roof Replacement</option>
+                  <option>Active Leak / Urgent Repair</option>
+                  <option>Standing Seam Metal Roof Estimate</option>
                   <option>Class 4 Hail Resistance Upgrade</option>
                   <option>Commercial / Multi-Family Roof</option>
                 </select>
@@ -395,12 +431,12 @@
 
               <div class="grid grid-cols-2 gap-3">
                 <div>
-                  <label class="block text-xs font-medium text-slate-300 mb-1">Your Name</label>
+                  <label class="block text-xs font-semibold text-slate-300 mb-1">Your Name</label>
                   <input type="text" required placeholder="Abraham C." 
                          class="w-full bg-slate-900/80 border border-white/15 rounded-xl px-3.5 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-brand-orange transition">
                 </div>
                 <div>
-                  <label class="block text-xs font-medium text-slate-300 mb-1">Cell Phone</label>
+                  <label class="block text-xs font-semibold text-slate-300 mb-1">Cell Phone</label>
                   <input type="tel" required placeholder="(210) 555-0199" 
                          class="w-full bg-slate-900/80 border border-white/15 rounded-xl px-3.5 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-brand-orange transition">
                 </div>
@@ -411,9 +447,10 @@
                 <i class="fa-solid fa-arrow-right"></i>
               </button>
 
-              <p class="text-[11px] text-center text-slate-400">
-                <i class="fa-solid fa-lock text-brand-orange mr-1"></i> No spam. No pushy salesmen. A licensed inspection team member will text or call you within 15 minutes.
-              </p>
+              <div class="pt-2 text-[11px] text-center text-slate-400 flex items-center justify-center gap-2">
+                <i class="fa-solid fa-lock text-brand-orange"></i>
+                <span>No spam. 15-minute callback by senior inspector.</span>
+              </div>
             </form>
 
           </div>
@@ -423,40 +460,228 @@
     </div>
   </section>
 
-  <!-- ==================== KEY STATS & PROMISE STRIP ==================== -->
-  <section class="bg-brand-navyDark border-y border-white/10 py-10 relative">
+  <!-- ==================== RHINO / BONDOC ACCREDITATION & TRUST STRIP ==================== -->
+  <section class="bg-brand-navyDark border-y border-white/10 py-6">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center items-center">
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 items-center text-center">
         
-        <div class="space-y-1">
-          <div class="font-display font-black text-4xl sm:text-5xl text-white">30+</div>
-          <div class="text-brand-orange font-bold text-sm uppercase tracking-wider">Years Experience</div>
-          <p class="text-xs text-slate-400">Combined crew craftsmanship</p>
+        <div class="p-2">
+          <div class="text-amber-400 font-bold text-lg"><i class="fa-solid fa-star"></i> 4.9 Rating</div>
+          <p class="text-[11px] text-slate-400">Google Verified Reviews</p>
         </div>
 
-        <div class="space-y-1">
-          <div class="font-display font-black text-4xl sm:text-5xl text-brand-orange">100%</div>
-          <div class="text-white font-bold text-sm uppercase tracking-wider">San Antonio Owned</div>
-          <p class="text-xs text-slate-400">Not out-of-state storm chasers</p>
+        <div class="p-2 border-l border-white/10">
+          <div class="text-white font-extrabold text-lg"><span class="text-brand-orange">30+</span> Years</div>
+          <p class="text-[11px] text-slate-400">Combined Crew Craft</p>
         </div>
 
-        <div class="space-y-1">
-          <div class="font-display font-black text-4xl sm:text-5xl text-white">21-Pt</div>
-          <div class="text-brand-orange font-bold text-sm uppercase tracking-wider">Drone Inspections</div>
-          <p class="text-xs text-slate-400">HD photo & thermal analysis</p>
+        <div class="p-2 border-l border-white/10">
+          <div class="text-white font-bold text-lg">BBB A+</div>
+          <p class="text-[11px] text-slate-400">Accredited Contractor</p>
         </div>
 
-        <div class="space-y-1">
-          <div class="font-display font-black text-4xl sm:text-5xl text-brand-orange">$0</div>
-          <div class="text-white font-bold text-sm uppercase tracking-wider">Inspection Fee</div>
-          <p class="text-xs text-slate-400">Complete honest written report</p>
+        <div class="p-2 border-l border-white/10">
+          <div class="text-emerald-400 font-bold text-lg"><i class="fa-solid fa-shield-halved"></i> 100% Insured</div>
+          <p class="text-[11px] text-slate-400">Worker's Comp & Liability</p>
+        </div>
+
+        <div class="p-2 border-l border-white/10">
+          <div class="text-white font-bold text-lg">Lifetime</div>
+          <p class="text-[11px] text-slate-400">Transferable Warranty</p>
+        </div>
+
+        <div class="p-2 border-l border-white/10">
+          <div class="text-brand-orange font-bold text-lg">Texas HB 2102</div>
+          <p class="text-[11px] text-slate-400">Legal Claims Navigation</p>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- ==================== FIELD PROJECTS GALLERY (10 REAL PHOTOS) ==================== -->
+  <!-- ==================== CORE SERVICES GRID (RHINO & BONDOC STYLE CARDS) ==================== -->
+  <section id="services" class="py-24 section-smoky-dark relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="px-3.5 py-1 rounded-full badge-chip text-xs font-bold text-brand-orange uppercase tracking-widest">
+          Complete Roofing Solutions
+        </span>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white mt-3 tracking-tight">
+          What We Do: Built For South Texas Weather
+        </h2>
+        <p class="text-slate-300 text-base mt-3">
+          Every roof is backed by 30+ years of local craftsmanship, factory manufacturer certifications, and complete clean-up guarantees.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Service 1: Residential Replacement -->
+        <div class="authority-card group flex flex-col justify-between">
+          <div class="h-52 overflow-hidden relative">
+            <img src="assets/multi-gable-estate.jpg" alt="Residential roof replacement on multi-gable home" class="w-full h-full object-cover img-zoom">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-navyDark via-transparent to-transparent"></div>
+            <span class="absolute top-4 left-4 brand-stamp px-3 py-1 rounded-full text-[11px] font-bold text-white">
+              Residential
+            </span>
+          </div>
+          <div class="p-6 space-y-3 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-white font-bold text-xl group-hover:text-brand-orange transition">Full Roof Replacement</h3>
+              <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+                Complete tear-off and re-roof using premium architectural shingles. Installed in 1 day with synthetic underlayment and full magnetic nail sweep.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-white/10 flex items-center justify-between text-xs font-bold text-brand-orange">
+              <span>Explore Replacements</span>
+              <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 2: Hail & Storm Restoration -->
+        <div class="authority-card group flex flex-col justify-between">
+          <div class="h-52 overflow-hidden relative">
+            <img src="assets/aerial-home-showcase.jpg" alt="Drone view of hail inspection and roof restore" class="w-full h-full object-cover img-zoom">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-navyDark via-transparent to-transparent"></div>
+            <span class="absolute top-4 left-4 brand-stamp px-3 py-1 rounded-full text-[11px] font-bold text-brand-orange">
+              Storm Defense
+            </span>
+          </div>
+          <div class="p-6 space-y-3 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-white font-bold text-xl group-hover:text-brand-orange transition">Hail & Storm Damage</h3>
+              <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+                Free 21-point drone and ground inspections following Bexar County hail events. We provide adjuster-ready photo packets without sleazy tactics.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-white/10 flex items-center justify-between text-xs font-bold text-brand-orange">
+              <span>Book Drone Scan</span>
+              <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 3: Leak Detection & Chimney Flashing -->
+        <div class="authority-card group flex flex-col justify-between">
+          <div class="h-52 overflow-hidden relative">
+            <img src="assets/chimney-craftsmanship.jpg" alt="Signature chimney counter-flashing and leak protection" class="w-full h-full object-cover img-zoom">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-navyDark via-transparent to-transparent"></div>
+            <span class="absolute top-4 left-4 brand-stamp px-3 py-1 rounded-full text-[11px] font-bold text-amber-300">
+              Precision Flashing
+            </span>
+          </div>
+          <div class="p-6 space-y-3 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-white font-bold text-xl group-hover:text-brand-orange transition">Leak Repairs & Flashing</h3>
+              <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+                The chimney on our logo represents our mastery over the #1 source of roof leaks: custom reglet chimney counter-flashing, valleys, and pipe boots.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-white/10 flex items-center justify-between text-xs font-bold text-brand-orange">
+              <span>Stop Active Leaks</span>
+              <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 4: Standing Seam Metal & Cool Roofs -->
+        <div class="authority-card group flex flex-col justify-between">
+          <div class="h-52 overflow-hidden relative">
+            <img src="assets/luxury-standing-seam.jpg" alt="Luxury black standing seam metal roof" class="w-full h-full object-cover img-zoom">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-navyDark via-transparent to-transparent"></div>
+            <span class="absolute top-4 left-4 brand-stamp px-3 py-1 rounded-full text-[11px] font-bold text-cyan-300">
+              50-Yr Durability
+            </span>
+          </div>
+          <div class="p-6 space-y-3 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-white font-bold text-xl group-hover:text-brand-orange transition">Standing Seam Metal</h3>
+              <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+                Concealed fastener metal roofing reflecting up to 70% of solar radiation. Maximum defense against 140 mph winds and Class 4 hail impacts.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-white/10 flex items-center justify-between text-xs font-bold text-brand-orange">
+              <span>View Metal Options</span>
+              <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition"></i>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== THE 4-STEP HOMEFIRST PROCESS (RHINO / BONDOC PROVEN FLOW) ==================== -->
+  <section id="process" class="py-20 section-smoky-mid relative border-y border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="px-3.5 py-1 rounded-full badge-chip text-xs font-bold text-brand-orange uppercase tracking-widest">
+          Transparent & Painless
+        </span>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white mt-3 tracking-tight">
+          How We Work: The 4-Step HomeFirst Standard
+        </h2>
+        <p class="text-slate-300 text-sm sm:text-base mt-2">
+          From the first drone scan to your final magnetic yard sweep, you always know what to expect.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-4 gap-6">
+        
+        <!-- Step 1 -->
+        <div class="gloss-card p-6 rounded-2xl relative">
+          <div class="w-12 h-12 rounded-xl bg-brand-orange text-white font-display font-black text-xl flex items-center justify-center mb-4 shadow-lg shadow-brand-orange/30">
+            01
+          </div>
+          <h3 class="text-white font-bold text-lg">Free 21-Point Inspection</h3>
+          <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+            We fly high-resolution drones and inspect decking, shingles, flashing, and gutters. You receive a complete digital photo report.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="gloss-card p-6 rounded-2xl relative">
+          <div class="w-12 h-12 rounded-xl bg-brand-navyLight text-white font-display font-black text-xl flex items-center justify-center mb-4 border border-white/20">
+            02
+          </div>
+          <h3 class="text-white font-bold text-lg">Honest Options</h3>
+          <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+            No high-pressure sales. If a simple $800 repair will safely fix the issue, we will tell you honestly instead of pushing a full replacement.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="gloss-card p-6 rounded-2xl relative">
+          <div class="w-12 h-12 rounded-xl bg-brand-orange text-white font-display font-black text-xl flex items-center justify-center mb-4 shadow-lg shadow-brand-orange/30">
+            03
+          </div>
+          <h3 class="text-white font-bold text-lg">1-Day Flawless Install</h3>
+          <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+            Our 30-year crew arrives at 7:00 AM, protects your landscaping, installs to manufacturer specification, and sweeps for nails magnetically.
+          </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="gloss-card p-6 rounded-2xl relative">
+          <div class="w-12 h-12 rounded-xl bg-emerald-600 text-white font-display font-black text-xl flex items-center justify-center mb-4 shadow-lg shadow-emerald-600/30">
+            04
+          </div>
+          <h3 class="text-white font-bold text-lg">Lifetime Protection</h3>
+          <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+            You receive our written, transferable lifetime craftsmanship warranty and 50-year manufacturer protection for lasting peace of mind.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== FIELD PROJECTS GALLERY (ALL 10 REAL PHOTOS) ==================== -->
   <section id="projects" class="py-24 section-smoky-dark relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
@@ -464,14 +689,14 @@
         <div>
           <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full badge-chip text-xs font-bold text-brand-orange uppercase tracking-widest mb-3">
             <img src="assets/logo.svg" alt="HF" class="w-3.5 h-3.5 object-contain">
-            <span>Verified Field Work Across San Antonio</span>
+            <span>Verified Local Projects</span>
           </div>
           <h2 class="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight">
-            Real Craftsmanship. Real Roofs. <br>
-            <span class="text-brand-orange">100% HomeFirst Verified.</span>
+            Real Proof On Real Roofs. <br>
+            <span class="text-brand-orange">Crafted Across San Antonio.</span>
           </h2>
           <p class="text-slate-300 text-sm sm:text-base mt-2 max-w-2xl">
-            Explore 10 real installations across Bexar County and the Texas Hill Country—from architectural shingle replacements to premium standing seam metal.
+            See the actual quality of our crew in Alamo Heights, Stone Oak, Boerne, and the Texas Hill Country.
           </p>
         </div>
 
@@ -505,15 +730,14 @@
       <!-- Projects Grid Featuring ALL 10 Photos -->
       <div class="grid sm:grid-cols-2 lg:grid-cols-12 gap-6" id="projectsGrid">
         
-        <!-- Photo 1: Luxury Standing Seam Metal with Brick Chimney (Large Feature 8-col) -->
+        <!-- Photo 1: Luxury Standing Seam Metal with Brick Chimney (8-col) -->
         <div class="gallery-item lg:col-span-8 project-card group min-h-[380px] flex flex-col justify-end p-6 sm:p-8" data-category="metal details">
-          <img src="assets/luxury-standing-seam.jpg" alt="Modern luxury home with striking black standing seam metal roof and chimney" 
-               class="absolute inset-0 w-full h-full object-cover">
+          <img src="assets/luxury-standing-seam.jpg" alt="Modern luxury home with black standing seam metal roof and chimney" class="absolute inset-0 w-full h-full object-cover">
           <div class="absolute inset-0 bg-gradient-to-t from-brand-navyDark via-brand-navyDark/45 to-transparent"></div>
           
           <div class="absolute top-5 right-5 brand-stamp px-3.5 py-1.5 rounded-full flex items-center gap-2 z-10">
             <img src="assets/logo.svg" alt="HF" class="w-4 h-4 object-contain">
-            <span class="text-xs font-extrabold text-white tracking-wide">HomeFirst Signature Build</span>
+            <span class="text-xs font-extrabold text-white tracking-wide">Stone Oak Luxury Build</span>
           </div>
 
           <div class="relative z-10 space-y-2 max-w-xl">
@@ -524,24 +748,19 @@
               Architectural Standing Seam & Custom Chimney Tie-In
             </h3>
             <p class="text-xs sm:text-sm text-slate-200">
-              Concealed fasteners, 24-gauge cool-roof metal panels, and custom chimney step-flashing engineered to withstand 140 mph wind gusts and zero maintenance for 50+ years.
+              Concealed fasteners, 24-gauge cool-roof metal panels, and custom chimney step-flashing engineered to withstand 140 mph wind gusts.
             </p>
-            <div class="flex items-center gap-4 text-xs text-slate-300 pt-1 font-medium">
-              <span><i class="fa-solid fa-location-dot text-brand-orange mr-1"></i> Stone Oak, San Antonio</span>
-              <span><i class="fa-solid fa-shield-halved text-brand-orange mr-1"></i> Class 4 Impact Rated</span>
-            </div>
           </div>
         </div>
 
         <!-- Photo 2: Multi-Gable Blue Estate (4-col) -->
         <div class="gallery-item lg:col-span-4 project-card group min-h-[380px] flex flex-col justify-end p-6 sm:p-7" data-category="residential">
-          <img src="assets/multi-gable-estate.jpg" alt="Multi-gable blue luxury home with pristine dimensional shingles" 
-               class="absolute inset-0 w-full h-full object-cover">
+          <img src="assets/multi-gable-estate.jpg" alt="Multi-gable blue luxury home with pristine dimensional shingles" class="absolute inset-0 w-full h-full object-cover">
           <div class="absolute inset-0 bg-gradient-to-t from-brand-navyDark via-brand-navyDark/50 to-transparent"></div>
           
           <div class="absolute top-5 right-5 brand-stamp px-3 py-1 rounded-full flex items-center gap-1.5 z-10">
             <img src="assets/logo.svg" alt="HF" class="w-3.5 h-3.5 object-contain">
-            <span class="text-[11px] font-bold text-white">Full Replacement</span>
+            <span class="text-[11px] font-bold text-white">The Dominion, SA</span>
           </div>
 
           <div class="relative z-10 space-y-2">
@@ -549,7 +768,7 @@
               High-Pitch Shingles
             </span>
             <h3 class="text-xl font-bold text-white font-display">
-              Multi-Gable Estate Shingle Replacement
+              Multi-Gable Estate Replacement
             </h3>
             <p class="text-xs text-slate-200">
               Triple-layer architectural shingles with reinforced nail zones for steep valley angles.
@@ -559,18 +778,17 @@
 
         <!-- Photo 3: Aerial Luxury Home Drone View (4-col) -->
         <div class="gallery-item lg:col-span-4 project-card group min-h-[360px] flex flex-col justify-end p-6 sm:p-7" data-category="residential">
-          <img src="assets/aerial-home-showcase.jpg" alt="Aerial drone shot of completed architectural shingle roof" 
-               class="absolute inset-0 w-full h-full object-cover">
+          <img src="assets/aerial-home-showcase.jpg" alt="Aerial drone shot of completed architectural shingle roof" class="absolute inset-0 w-full h-full object-cover">
           <div class="absolute inset-0 bg-gradient-to-t from-brand-navyDark via-brand-navyDark/50 to-transparent"></div>
           
           <div class="absolute top-5 right-5 brand-stamp px-3 py-1 rounded-full flex items-center gap-1.5 z-10">
             <i class="fa-solid fa-drone text-brand-orange text-xs"></i>
-            <span class="text-[11px] font-bold text-white">Drone Verified</span>
+            <span class="text-[11px] font-bold text-white">Alamo Heights</span>
           </div>
 
           <div class="relative z-10 space-y-2">
             <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-brand-orange text-white uppercase tracking-wider">
-              Alamo Heights
+              Drone Scan
             </span>
             <h3 class="text-lg font-bold text-white font-display">
               Aerial Drone Inspection & Install
@@ -583,13 +801,12 @@
 
         <!-- Photo 4: Modern Texas Ranch with Dark Roof (4-col) -->
         <div class="gallery-item lg:col-span-4 project-card group min-h-[360px] flex flex-col justify-end p-6 sm:p-7" data-category="metal residential">
-          <img src="assets/modern-ranch-metal.jpg" alt="Modern Texas ranch home with sleek dark metal roof and stucco exterior" 
-               class="absolute inset-0 w-full h-full object-cover">
+          <img src="assets/modern-ranch-metal.jpg" alt="Modern Texas ranch home with sleek dark metal roof" class="absolute inset-0 w-full h-full object-cover">
           <div class="absolute inset-0 bg-gradient-to-t from-brand-navyDark via-brand-navyDark/50 to-transparent"></div>
           
           <div class="absolute top-5 right-5 brand-stamp px-3 py-1 rounded-full flex items-center gap-1.5 z-10">
             <img src="assets/logo.svg" alt="HF" class="w-3.5 h-3.5 object-contain">
-            <span class="text-[11px] font-bold text-white">Cool Roof Standard</span>
+            <span class="text-[11px] font-bold text-white">Boerne, TX</span>
           </div>
 
           <div class="relative z-10 space-y-2">
@@ -597,7 +814,7 @@
               Hill Country Ranch
             </span>
             <h3 class="text-lg font-bold text-white font-display">
-              Modern Texas Ranch Metal Transformation
+              Modern Texas Ranch Metal
             </h3>
             <p class="text-xs text-slate-200">
               Reflects up to 70% of solar heat, slashing summer CPS Energy electric bills.
@@ -605,10 +822,9 @@
           </div>
         </div>
 
-        <!-- Photo 5: Brick Chimney Counter-Flashing & Shingle Detail (4-col) -->
+        <!-- Photo 5: Brick Chimney Counter-Flashing (4-col) -->
         <div class="gallery-item lg:col-span-4 project-card group min-h-[360px] flex flex-col justify-end p-6 sm:p-7" data-category="details">
-          <img src="assets/chimney-craftsmanship.jpg" alt="Brick chimney counter-flashing and pristine shingle integration" 
-               class="absolute inset-0 w-full h-full object-cover">
+          <img src="assets/chimney-craftsmanship.jpg" alt="Brick chimney counter-flashing and pristine shingle integration" class="absolute inset-0 w-full h-full object-cover">
           <div class="absolute inset-0 bg-gradient-to-t from-brand-navyDark via-brand-navyDark/50 to-transparent"></div>
           
           <div class="absolute top-5 right-5 brand-stamp px-3 py-1 rounded-full flex items-center gap-1.5 z-10">
@@ -621,42 +837,40 @@
               Leak Prevention
             </span>
             <h3 class="text-lg font-bold text-white font-display">
-              Precision Chimney Counter-Flashing
+              Precision Chimney Flashing
             </h3>
             <p class="text-xs text-slate-200">
-              Embedded reglet counter-flashing into brick mortar joints to stop South Texas wind-driven rain.
+              Embedded reglet counter-flashing into brick mortar joints to permanently stop water entry.
             </p>
           </div>
         </div>
 
-        <!-- Photo 6: Roofer Silhouette on Ridge with Harness (6-col) -->
+        <!-- Photo 6: Roofer Silhouette on Ridge (6-col) -->
         <div class="gallery-item lg:col-span-6 project-card group min-h-[340px] flex flex-col justify-end p-6 sm:p-7" data-category="crew">
-          <img src="assets/heroic-roofer-silhouette.jpg" alt="Silhouette of roofer on roof ridge with harness and toolbelt against Texas sun" 
-               class="absolute inset-0 w-full h-full object-cover">
+          <img src="assets/heroic-roofer-silhouette.jpg" alt="Silhouette of roofer on roof ridge with harness" class="absolute inset-0 w-full h-full object-cover">
           <div class="absolute inset-0 bg-gradient-to-t from-brand-navyDark via-brand-navyDark/50 to-transparent"></div>
           
           <div class="absolute top-5 right-5 brand-stamp px-3.5 py-1.5 rounded-full flex items-center gap-2 z-10">
             <span class="w-2 h-2 rounded-full bg-brand-orange animate-ping"></span>
-            <span class="text-xs font-bold text-white">OSHA Certified Safety</span>
+            <span class="text-xs font-bold text-white">Full Safety Protocol</span>
           </div>
 
           <div class="relative z-10 space-y-2">
             <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-brand-orange text-white uppercase tracking-wider">
-              Integrity & Safety
+              Work Ethic
             </span>
             <h3 class="text-xl font-bold text-white font-display">
-              Safety First On Every San Antonio Pitch
+              Safety First On Every Pitch
             </h3>
             <p class="text-xs text-slate-200">
-              Full worker's compensation and strict harness protocol protects both our crew and the homeowner from any liability.
+              Full worker's compensation and strict harness protocol protects both our crew and the homeowner.
             </p>
           </div>
         </div>
 
         <!-- Photo 7: Craftsman Fastening Ridge Shingles (6-col) -->
         <div class="gallery-item lg:col-span-6 project-card group min-h-[340px] flex flex-col justify-end p-6 sm:p-7" data-category="crew details">
-          <img src="assets/craftsman-fastening.jpg" alt="Roofer fastening shingles with precision drill at sunrise" 
-               class="absolute inset-0 w-full h-full object-cover">
+          <img src="assets/craftsman-fastening.jpg" alt="Roofer fastening shingles with precision drill at sunrise" class="absolute inset-0 w-full h-full object-cover">
           <div class="absolute inset-0 bg-gradient-to-t from-brand-navyDark via-brand-navyDark/50 to-transparent"></div>
           
           <div class="absolute top-5 right-5 brand-stamp px-3.5 py-1.5 rounded-full flex items-center gap-2 z-10">
@@ -669,18 +883,17 @@
               Master Detail
             </span>
             <h3 class="text-xl font-bold text-white font-display">
-              Precision Shingle Alignment & Ridge Fastening
+              Precision Shingle Alignment
             </h3>
             <p class="text-xs text-slate-200">
-              Hand-guided nail placement into common-bond zones guarantees manufacturer warranty activation.
+              Hand-guided nail placement into common-bond zones guarantees warranty activation.
             </p>
           </div>
         </div>
 
         <!-- Photo 8: Crew in Action Laying Shingles (4-col) -->
         <div class="gallery-item lg:col-span-4 project-card group min-h-[320px] flex flex-col justify-end p-6" data-category="crew residential">
-          <img src="assets/crew-action.jpg" alt="HomeFirst Roofing crew actively laying shingles under blue Texas sky" 
-               class="absolute inset-0 w-full h-full object-cover">
+          <img src="assets/crew-action.jpg" alt="HomeFirst Roofing crew actively laying shingles" class="absolute inset-0 w-full h-full object-cover">
           <div class="absolute inset-0 bg-gradient-to-t from-brand-navyDark via-brand-navyDark/55 to-transparent"></div>
           
           <div class="absolute top-4 right-4 brand-stamp px-3 py-1 rounded-full flex items-center gap-1.5 z-10">
@@ -696,8 +909,7 @@
 
         <!-- Photo 9: Ridge Cap & Granule Lock Macro Detail (4-col) -->
         <div class="gallery-item lg:col-span-4 project-card group min-h-[320px] flex flex-col justify-end p-6" data-category="details">
-          <img src="assets/shingle-detail.jpg" alt="Macro detail of ridge cap shingles and granule density" 
-               class="absolute inset-0 w-full h-full object-cover">
+          <img src="assets/shingle-detail.jpg" alt="Macro detail of ridge cap shingles and granule density" class="absolute inset-0 w-full h-full object-cover">
           <div class="absolute inset-0 bg-gradient-to-t from-brand-navyDark via-brand-navyDark/55 to-transparent"></div>
           
           <div class="absolute top-4 right-4 brand-stamp px-3 py-1 rounded-full flex items-center gap-1.5 z-10">
@@ -713,8 +925,7 @@
 
         <!-- Photo 10: Sunrise Golden Hour Crew Prep (4-col) -->
         <div class="gallery-item lg:col-span-4 project-card group min-h-[320px] flex flex-col justify-end p-6" data-category="crew">
-          <img src="assets/golden-hour-crew.jpg" alt="Sunrise golden hour roofing installation in San Antonio" 
-               class="absolute inset-0 w-full h-full object-cover">
+          <img src="assets/golden-hour-crew.jpg" alt="Sunrise golden hour roofing installation in San Antonio" class="absolute inset-0 w-full h-full object-cover">
           <div class="absolute inset-0 bg-gradient-to-t from-brand-navyDark via-brand-navyDark/55 to-transparent"></div>
           
           <div class="absolute top-4 right-4 brand-stamp px-3 py-1 rounded-full flex items-center gap-1.5 z-10">
@@ -733,116 +944,113 @@
     </div>
   </section>
 
-  <!-- ==================== NEW SECTION: THE ANATOMY OF OUR LOGO ==================== -->
-  <section id="logo-story" class="py-20 section-smoky-mid relative overflow-hidden border-y border-white/10">
+  <!-- ==================== VERIFIED GOOGLE CUSTOMER REVIEWS (RHINO / BONDOC SOCIAL PROOF) ==================== -->
+  <section id="reviews" class="py-20 section-smoky-mid relative border-b border-white/10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
-      <div class="grid lg:grid-cols-12 gap-12 items-center">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full badge-chip text-xs font-bold text-brand-orange uppercase tracking-widest mb-3">
+          <i class="fa-brands fa-google text-amber-400"></i>
+          <span>Real San Antonio Homeowners</span>
+        </div>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white tracking-tight">
+          Rated 4.9 Stars Across San Antonio
+        </h2>
+        <p class="text-slate-300 text-sm sm:text-base mt-2">
+          Read what your neighbors say about Abraham Cruz, our 1-day installations, and our spotless cleanups.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
         
-        <!-- Left: Logo Breakdown Card -->
-        <div class="lg:col-span-5">
-          <div class="gloss-card rounded-3xl p-8 sm:p-10 text-center relative border border-brand-orange/40 shadow-2xl">
-            
-            <div class="w-36 h-36 mx-auto p-4 rounded-3xl bg-white shadow-2xl shadow-brand-orange/30 flex items-center justify-center border-4 border-brand-orange/50 mb-6">
-              <img src="assets/logo.svg" alt="HomeFirst Roofing Logo" class="w-full h-full object-contain">
+        <!-- Review 1 -->
+        <div class="gloss-card p-6 sm:p-8 rounded-2xl relative flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center gap-1 text-amber-400 text-sm">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <span class="text-xs text-emerald-400 font-bold flex items-center gap-1">
+                <i class="fa-solid fa-circle-check"></i> Verified Google Review
+              </span>
             </div>
-
-            <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-orange/20 text-brand-orange border border-brand-orange/40 text-xs font-bold uppercase tracking-wider mb-2">
-              The HomeFirst Crest
-            </div>
-
-            <h3 class="text-2xl font-black text-white font-display">
-              More Than An Icon. <br>
-              <span class="text-brand-orange">It's Our Roofing Standard.</span>
-            </h3>
-
-            <p class="text-xs text-slate-300 mt-3 leading-relaxed">
-              Every curve and angle in the HomeFirst mark reflects how Abraham Cruz and his 30-year crew engineer roofs for South Texas weather.
+            <p class="text-sm text-slate-200 leading-relaxed italic">
+              "After that golf-ball hail hit Alamo Heights, six different out-of-town roofers knocked on our door promising 'free roofs'. Abraham Cruz came out, showed us detailed drone photos, and walked through our insurance claim legally. His crew finished our entire roof in a single day and left our yard cleaner than when they started!"
             </p>
-
-            <!-- 3 Meaning Points -->
-            <div class="space-y-3 mt-6 text-left">
-              <div class="p-3.5 rounded-xl bg-slate-900/80 border border-white/10 flex items-start gap-3">
-                <div class="w-7 h-7 rounded-lg bg-brand-navy text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">
-                  H
-                </div>
-                <div>
-                  <p class="text-xs font-bold text-white">The Navy Gable: Structural Ridge</p>
-                  <p class="text-[11px] text-slate-400">Represents 30+ years of structural truss integrity and hurricane-grade wind uplift resistance.</p>
-                </div>
-              </div>
-
-              <div class="p-3.5 rounded-xl bg-slate-900/80 border border-brand-orange/30 flex items-start gap-3">
-                <div class="w-7 h-7 rounded-lg bg-brand-orange text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">
-                  <i class="fa-solid fa-water"></i>
-                </div>
-                <div>
-                  <p class="text-xs font-bold text-brand-orange">The Chimney: Leak Protection Hallmark</p>
-                  <p class="text-[11px] text-slate-400">Notice the chimney on the right slope? 90% of roof leaks happen around chimneys and flashing. We master that tie-in so your roof never fails.</p>
-                </div>
-              </div>
-
-              <div class="p-3.5 rounded-xl bg-slate-900/80 border border-white/10 flex items-start gap-3">
-                <div class="w-7 h-7 rounded-lg bg-emerald-500/20 text-emerald-300 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">
-                  F
-                </div>
-                <div>
-                  <p class="text-xs font-bold text-white">The Orange 'F': Community First</p>
-                  <p class="text-[11px] text-slate-400">Abraham Cruz's promise: Put our neighbors and San Antonio families first in every estimate, repair, and hail claim.</p>
-                </div>
-              </div>
+          </div>
+          <div class="pt-6 mt-6 border-t border-white/10 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-brand-orange text-white font-bold flex items-center justify-center">
+              RM
             </div>
-
+            <div>
+              <p class="text-white font-bold text-sm">Robert M.</p>
+              <p class="text-xs text-slate-400">Alamo Heights, TX • Full Roof Replacement</p>
+            </div>
           </div>
         </div>
 
-        <!-- Right: Real Flashing Comparison -->
-        <div class="lg:col-span-7 space-y-6">
-          <span class="px-3.5 py-1 rounded-full badge-chip text-xs font-bold text-brand-orange uppercase tracking-widest">
-            Brand Engineering
-          </span>
-
-          <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white tracking-tight leading-tight">
-            Why Our Logo Has A Chimney: <br>
-            <span class="text-brand-orange">We Protect What Others Overlook.</span>
-          </h2>
-
-          <p class="text-slate-300 text-base leading-relaxed">
-            Most roofing companies slap shingles over rotten decking and reuse old, rusted chimney flashing because it saves them 45 minutes of labor. When the next torrential San Antonio storm hits, water pours straight down the chimney wall into your living room.
-          </p>
-
-          <p class="text-slate-300 text-base leading-relaxed">
-            At HomeFirst Roofing, our signature standard includes <strong class="text-white">double step-flashing, embedded reglet counter-flashing, and ice & water membrane shields</strong> around every chimney, pipe boot, and valley. That's why the chimney sits proudly on our logo—as a badge of permanent waterproofing.
-          </p>
-
-          <!-- 2 Photos side-by-side -->
-          <div class="grid sm:grid-cols-2 gap-4 pt-2">
-            <div class="project-card rounded-2xl overflow-hidden h-48 relative border border-white/15">
-              <img src="assets/chimney-craftsmanship.jpg" alt="HomeFirst signature chimney flashing" class="w-full h-full object-cover">
-              <div class="absolute inset-0 bg-gradient-to-t from-brand-navyDark/90 via-transparent to-transparent"></div>
-              <div class="absolute bottom-3 left-3 right-3 text-xs">
-                <p class="font-bold text-white">Signature Brick Counter-Flashing</p>
-                <p class="text-[11px] text-brand-orange">Embedded into brick mortar joints</p>
+        <!-- Review 2 -->
+        <div class="gloss-card p-6 sm:p-8 rounded-2xl relative flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center gap-1 text-amber-400 text-sm">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
               </div>
+              <span class="text-xs text-emerald-400 font-bold flex items-center gap-1">
+                <i class="fa-solid fa-circle-check"></i> Verified Google Review
+              </span>
             </div>
-
-            <div class="project-card rounded-2xl overflow-hidden h-48 relative border border-white/15">
-              <img src="assets/luxury-standing-seam.jpg" alt="Standing seam metal and modern chimney tie-in" class="w-full h-full object-cover">
-              <div class="absolute inset-0 bg-gradient-to-t from-brand-navyDark/90 via-transparent to-transparent"></div>
-              <div class="absolute bottom-3 left-3 right-3 text-xs">
-                <p class="font-bold text-white">Standing Seam Metal Tie-In</p>
-                <p class="text-[11px] text-cyan-300">Concealed fasteners & zero exposed screws</p>
-              </div>
+            <p class="text-sm text-slate-200 leading-relaxed italic">
+              "We had a chronic leak around our brick chimney that three other roofers couldn't solve. Abraham explained how his logo literally features a chimney because proper reglet counter-flashing is their specialty. They tore out the old lead, installed new step-flashing, and through three massive rainstorms—not a single drop. Worth every penny."
+            </p>
+          </div>
+          <div class="pt-6 mt-6 border-t border-white/10 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-brand-navy text-brand-orange font-bold flex items-center justify-center border border-brand-orange">
+              SC
+            </div>
+            <div>
+              <p class="text-white font-bold text-sm">Sylvia C.</p>
+              <p class="text-xs text-slate-400">Stone Oak, TX • Chimney Flashing & Leak Repair</p>
             </div>
           </div>
+        </div>
 
-          <div class="pt-2 flex items-center gap-4">
-            <a href="#estimate-form" class="btn-gloss-orange text-white px-6 py-3 rounded-xl font-bold text-sm inline-flex items-center gap-2">
-              <span>Schedule Flashing & Roof Inspection</span>
-              <i class="fa-solid fa-arrow-right"></i>
-            </a>
+        <!-- Review 3 -->
+        <div class="gloss-card p-6 sm:p-8 rounded-2xl relative flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center gap-1 text-amber-400 text-sm">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <span class="text-xs text-emerald-400 font-bold flex items-center gap-1">
+                <i class="fa-solid fa-circle-check"></i> Verified Google Review
+              </span>
+            </div>
+            <p class="text-sm text-slate-200 leading-relaxed italic">
+              "Upgraded to Class 4 impact shingles through HomeFirst. My USAA insurance agent immediately gave us a 22% annual discount on our home insurance! The crew has worked together for decades and you can tell—zero standing around, extremely polite, and Abraham personally checked in twice during the day. Highly recommend."
+            </p>
           </div>
-
+          <div class="pt-6 mt-6 border-t border-white/10 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-brand-orange text-white font-bold flex items-center justify-center">
+              DG
+            </div>
+            <div>
+              <p class="text-white font-bold text-sm">David G.</p>
+              <p class="text-xs text-slate-400">Boerne, TX • Class 4 Hail Shingles Upgrade</p>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -961,9 +1169,7 @@
         <div class="lg:col-span-5 relative">
           <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-white/15 gloss-card">
             <!-- Real photo of the crew at work -->
-            <img src="assets/crew-action.jpg" 
-                 alt="Abraham Cruz and the HomeFirst Roofing crew in action on a Texas roof" 
-                 class="w-full h-[470px] object-cover filter brightness-95 contrast-105">
+            <img src="assets/crew-action.jpg" alt="Abraham Cruz and the HomeFirst Roofing crew in action on a Texas roof" class="w-full h-[470px] object-cover filter brightness-95 contrast-105">
             
             <div class="absolute inset-0 bg-gradient-to-t from-brand-navyDark via-brand-navyDark/40 to-transparent"></div>
 
@@ -974,7 +1180,7 @@
                 </div>
                 <div>
                   <h4 class="text-white font-bold text-base">Abraham Cruz & Crew</h4>
-                  <p class="text-xs text-brand-orange font-semibold">Founder, Craftsman & Community Patron</p>
+                  <p class="text-xs text-brand-orange font-semibold">Founder, Craftsman & Community Leader</p>
                 </div>
               </div>
               <p class="text-xs text-slate-300 mt-2.5 italic">
@@ -1054,329 +1260,8 @@
     </div>
   </section>
 
-  <!-- ==================== COMPETITOR COMPARISON ==================== -->
-  <section id="comparison" class="py-20 section-smoky-dark relative">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      
-      <div class="text-center max-w-2xl mx-auto mb-14">
-        <span class="px-3.5 py-1 rounded-full badge-chip text-xs font-bold text-brand-orange uppercase tracking-widest">
-          San Antonio Homeowner Defense
-        </span>
-        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white mt-3 tracking-tight">
-          Texas Doesn't License Roofers. <br>
-          <span class="text-brand-orange">Here's How To Protect Yourself.</span>
-        </h2>
-        <p class="text-slate-300 text-sm sm:text-base mt-2">
-          After a South Texas hail storm, hundreds of out-of-state contractors knock on doors. Compare what you get with transient storm chasers vs. HomeFirst Roofing.
-        </p>
-      </div>
-
-      <div class="overflow-x-auto">
-        <table class="w-full text-left border-collapse gloss-card rounded-2xl overflow-hidden">
-          <thead>
-            <tr class="border-b border-white/10 bg-slate-900/80 text-xs sm:text-sm uppercase tracking-wider text-slate-400">
-              <th class="p-4 sm:p-6 font-bold text-white">Trust & Quality Factor</th>
-              <th class="p-4 sm:p-6 font-bold text-red-400 bg-red-950/20">Out-of-Town "Storm Chasers"</th>
-              <th class="p-4 sm:p-6 font-bold text-brand-orange bg-brand-orange/10 flex items-center gap-2">
-                <img src="assets/logo.svg" alt="HF" class="w-4 h-4 object-contain">
-                <span>HomeFirst Roofing</span>
-              </th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-white/10 text-xs sm:text-sm">
-            
-            <tr>
-              <td class="p-4 sm:p-6 font-semibold text-white">
-                <i class="fa-solid fa-map-pin text-brand-orange mr-2"></i> Local Physical Presence
-              </td>
-              <td class="p-4 sm:p-6 text-slate-300 bg-red-950/10">
-                P.O. box or temporary motel; leaves town once checks clear.
-              </td>
-              <td class="p-4 sm:p-6 text-white font-bold bg-brand-orange/5">
-                <i class="fa-solid fa-check text-emerald-400 mr-1.5"></i> Born, raised & active right here in San Antonio.
-              </td>
-            </tr>
-
-            <tr>
-              <td class="p-4 sm:p-6 font-semibold text-white">
-                <i class="fa-solid fa-user-group text-brand-orange mr-2"></i> Crew Experience
-              </td>
-              <td class="p-4 sm:p-6 text-slate-300 bg-red-950/10">
-                Day-laborers hired off Craigslist with little oversight.
-              </td>
-              <td class="p-4 sm:p-6 text-white font-bold bg-brand-orange/5">
-                <i class="fa-solid fa-check text-emerald-400 mr-1.5"></i> Combined 30+ years hands-on roofing experience.
-              </td>
-            </tr>
-
-            <tr>
-              <td class="p-4 sm:p-6 font-semibold text-white">
-                <i class="fa-solid fa-scale-balanced text-brand-orange mr-2"></i> Texas HB 2102 Legal Compliance
-              </td>
-              <td class="p-4 sm:p-6 text-slate-300 bg-red-950/10">
-                Offers illegal "deductible waiving" schemes that can void your insurance policy.
-              </td>
-              <td class="p-4 sm:p-6 text-white font-bold bg-brand-orange/5">
-                <i class="fa-solid fa-check text-emerald-400 mr-1.5"></i> 100% compliant, honest insurance navigation & adjustor advocacy.
-              </td>
-            </tr>
-
-            <tr>
-              <td class="p-4 sm:p-6 font-semibold text-white">
-                <i class="fa-solid fa-camera-retro text-brand-orange mr-2"></i> Inspection Integrity
-              </td>
-              <td class="p-4 sm:p-6 text-slate-300 bg-red-950/10">
-                Tells every homeowner they need a $25K replacement even for 2 slipped shingles.
-              </td>
-              <td class="p-4 sm:p-6 text-white font-bold bg-brand-orange/5">
-                <i class="fa-solid fa-check text-emerald-400 mr-1.5"></i> 21-point photographic report; we recommend repairs if replacement isn't needed.
-              </td>
-            </tr>
-
-            <tr>
-              <td class="p-4 sm:p-6 font-semibold text-white">
-                <i class="fa-solid fa-shield-virus text-brand-orange mr-2"></i> Workmanship Warranty
-              </td>
-              <td class="p-4 sm:p-6 text-slate-300 bg-red-950/10">
-                "Tail-light warranty" — expires the moment their truck turns the corner.
-              </td>
-              <td class="p-4 sm:p-6 text-white font-bold bg-brand-orange/5">
-                <i class="fa-solid fa-check text-emerald-400 mr-1.5"></i> Written lifetime leak-free craftsmanship warranty backed by Abraham Cruz.
-              </td>
-            </tr>
-
-          </tbody>
-        </table>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ==================== SAN ANTONIO HAIL & STORM DAMAGE CHECKLIST ==================== -->
-  <section id="hail-guide" class="py-20 section-smoky-mid relative">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      
-      <div class="text-center max-w-2xl mx-auto mb-14">
-        <span class="px-3.5 py-1 rounded-full badge-chip text-xs font-bold text-brand-orange uppercase tracking-widest">
-          Self-Check Guide
-        </span>
-        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white mt-3 tracking-tight">
-          Did The Recent Storm Hit Your Roof?
-        </h2>
-        <p class="text-slate-300 text-sm sm:text-base mt-2">
-          Never climb on a wet or steep roof yourself! Check these 5 ground-level warning signs. Click each sign you observe:
-        </p>
-      </div>
-
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="hailChecklist">
-        
-        <!-- Item 1 -->
-        <div class="hail-item gloss-card p-6 rounded-2xl cursor-pointer border border-white/10 transition" onclick="toggleHailItem(this)">
-          <div class="flex items-start justify-between">
-            <div class="w-10 h-10 rounded-xl bg-brand-orange/20 text-brand-orange flex items-center justify-center text-lg">
-              <i class="fa-solid fa-water"></i>
-            </div>
-            <div class="check-box w-6 h-6 rounded-lg border border-white/30 flex items-center justify-center text-brand-orange text-sm"></div>
-          </div>
-          <h3 class="text-white font-bold text-base mt-4">Granule Loss in Gutters</h3>
-          <p class="text-xs text-slate-300 mt-2">
-            Finding what looks like black coffee grounds or dark sand piling up around your downspouts after rain.
-          </p>
-        </div>
-
-        <!-- Item 2 -->
-        <div class="hail-item gloss-card p-6 rounded-2xl cursor-pointer border border-white/10 transition" onclick="toggleHailItem(this)">
-          <div class="flex items-start justify-between">
-            <div class="w-10 h-10 rounded-xl bg-brand-orange/20 text-brand-orange flex items-center justify-center text-lg">
-              <i class="fa-solid fa-fan"></i>
-            </div>
-            <div class="check-box w-6 h-6 rounded-lg border border-white/30 flex items-center justify-center text-brand-orange text-sm"></div>
-          </div>
-          <h3 class="text-white font-bold text-base mt-4">Dents on AC Units or Vents</h3>
-          <p class="text-xs text-slate-300 mt-2">
-            Soft metal fins on your air conditioning condenser or metal roof vents show pea-to-golf-ball sized dings.
-          </p>
-        </div>
-
-        <!-- Item 3 -->
-        <div class="hail-item gloss-card p-6 rounded-2xl cursor-pointer border border-white/10 transition" onclick="toggleHailItem(this)">
-          <div class="flex items-start justify-between">
-            <div class="w-10 h-10 rounded-xl bg-brand-orange/20 text-brand-orange flex items-center justify-center text-lg">
-              <i class="fa-solid fa-wind"></i>
-            </div>
-            <div class="check-box w-6 h-6 rounded-lg border border-white/30 flex items-center justify-center text-brand-orange text-sm"></div>
-          </div>
-          <h3 class="text-white font-bold text-base mt-4">Lifted or Missing Shingles</h3>
-          <p class="text-xs text-slate-300 mt-2">
-            Visible creasing, curled edges, or shingles that blew down into your yard during South Texas gusts.
-          </p>
-        </div>
-
-        <!-- Item 4 -->
-        <div class="hail-item gloss-card p-6 rounded-2xl cursor-pointer border border-white/10 transition" onclick="toggleHailItem(this)">
-          <div class="flex items-start justify-between">
-            <div class="w-10 h-10 rounded-xl bg-brand-orange/20 text-brand-orange flex items-center justify-center text-lg">
-              <i class="fa-solid fa-droplet"></i>
-            </div>
-            <div class="check-box w-6 h-6 rounded-lg border border-white/30 flex items-center justify-center text-brand-orange text-sm"></div>
-          </div>
-          <h3 class="text-white font-bold text-base mt-4">Interior Ceiling Water Spots</h3>
-          <p class="text-xs text-slate-300 mt-2">
-            Yellowish discoloration, damp drywall, or paint bubbling in top-floor bedrooms or around chimneys.
-          </p>
-        </div>
-
-        <!-- Item 5 -->
-        <div class="hail-item gloss-card p-6 rounded-2xl cursor-pointer border border-white/10 transition" onclick="toggleHailItem(this)">
-          <div class="flex items-start justify-between">
-            <div class="w-10 h-10 rounded-xl bg-brand-orange/20 text-brand-orange flex items-center justify-center text-lg">
-              <i class="fa-solid fa-tree"></i>
-            </div>
-            <div class="check-box w-6 h-6 rounded-lg border border-white/30 flex items-center justify-center text-brand-orange text-sm"></div>
-          </div>
-          <h3 class="text-white font-bold text-base mt-4">Shredded Foliage & Window Screens</h3>
-          <p class="text-xs text-slate-300 mt-2">
-            Torn window screens, chipped exterior paint, or stripped live oak branches indicate severe impact force.
-          </p>
-        </div>
-
-        <!-- Item 6: Summary Action Box -->
-        <div class="gloss-card p-6 rounded-2xl border border-brand-orange/40 bg-brand-orange/10 flex flex-col justify-between">
-          <div>
-            <div class="flex items-center gap-2 text-brand-orange text-sm font-bold">
-              <i class="fa-solid fa-bell"></i>
-              <span>Inspection Status</span>
-            </div>
-            <h3 class="text-white font-bold text-lg mt-2" id="hailScoreTitle">0 Warning Signs Selected</h3>
-            <p class="text-xs text-slate-300 mt-1" id="hailScoreDesc">
-              Click any signs above to see our expert recommendation.
-            </p>
-          </div>
-          <a href="#estimate-form" class="btn-gloss-orange text-white py-3 rounded-xl font-bold text-xs tracking-wider uppercase text-center mt-4">
-            Book Free Drone Scan
-          </a>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ==================== FULL SERVICES GRID WITH DEPTH CARDS ==================== -->
-  <section id="services" class="py-20 section-smoky-dark relative">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      
-      <div class="text-center max-w-2xl mx-auto mb-14">
-        <span class="px-3.5 py-1 rounded-full badge-chip text-xs font-bold text-brand-orange uppercase tracking-widest">
-          Complete Roofing Solutions
-        </span>
-        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white mt-3 tracking-tight">
-          Master Craftsmanship for Every San Antonio Roof
-        </h2>
-        <p class="text-slate-300 text-sm sm:text-base mt-2">
-          From historic Alamo Heights homes to modern Hill Country estates, our 30-year crew delivers clean, durable installations.
-        </p>
-      </div>
-
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        
-        <!-- Service 1 -->
-        <div class="gloss-card rounded-2xl p-7 relative group">
-          <div class="w-12 h-12 rounded-xl bg-brand-orange/20 border border-brand-orange/40 flex items-center justify-center text-brand-orange text-xl mb-5 group-hover:scale-110 transition">
-            <i class="fa-solid fa-cloud-showers-heavy"></i>
-          </div>
-          <h3 class="text-white font-bold text-xl mb-2">Hail & Storm Restoration</h3>
-          <p class="text-sm text-slate-300 leading-relaxed">
-            Fast, thorough response after Bexar County hail events. We provide comprehensive photo/drone documentation that expedites your insurance claim without red tape.
-          </p>
-          <ul class="mt-4 space-y-1.5 text-xs text-slate-400">
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> Drone inspection & thermal leak test</li>
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> Itemized adjuster-ready damage packet</li>
-          </ul>
-        </div>
-
-        <!-- Service 2 -->
-        <div class="gloss-card rounded-2xl p-7 relative group">
-          <div class="w-12 h-12 rounded-xl bg-brand-orange/20 border border-brand-orange/40 flex items-center justify-center text-brand-orange text-xl mb-5 group-hover:scale-110 transition">
-            <i class="fa-solid fa-house"></i>
-          </div>
-          <h3 class="text-white font-bold text-xl mb-2">Residential Replacements</h3>
-          <p class="text-sm text-slate-300 leading-relaxed">
-            Full roof tear-off and replacement installed to highest factory specifications. Backed by industry-leading manufacturer warranties and our own lifetime craft guarantee.
-          </p>
-          <ul class="mt-4 space-y-1.5 text-xs text-slate-400">
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> Architectural & dimensional shingles</li>
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> 1-day installation with magnetic yard cleanup</li>
-          </ul>
-        </div>
-
-        <!-- Service 3 -->
-        <div class="gloss-card rounded-2xl p-7 relative group">
-          <div class="w-12 h-12 rounded-xl bg-brand-orange/20 border border-brand-orange/40 flex items-center justify-center text-brand-orange text-xl mb-5 group-hover:scale-110 transition">
-            <i class="fa-solid fa-shield"></i>
-          </div>
-          <h3 class="text-white font-bold text-xl mb-2">Class 4 Hail Shingles</h3>
-          <p class="text-sm text-slate-300 leading-relaxed">
-            Engineered with SBS modified asphalt to withstand 2-inch hail impacts. Qualifying homeowners enjoy up to 25-30% annual discounts on Texas homeowners insurance.
-          </p>
-          <ul class="mt-4 space-y-1.5 text-xs text-slate-400">
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> UL 2218 Class 4 certified shingles</li>
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> Direct insurance certificate provided</li>
-          </ul>
-        </div>
-
-        <!-- Service 4 -->
-        <div class="gloss-card rounded-2xl p-7 relative group">
-          <div class="w-12 h-12 rounded-xl bg-brand-orange/20 border border-brand-orange/40 flex items-center justify-center text-brand-orange text-xl mb-5 group-hover:scale-110 transition">
-            <i class="fa-solid fa-wrench"></i>
-          </div>
-          <h3 class="text-white font-bold text-xl mb-2">Precision Leak Repairs</h3>
-          <p class="text-sm text-slate-300 leading-relaxed">
-            Don't replace when a skilled repair will do. We pinpoint flashing leaks, chimney seals, valley cracks, and pipe boot failures with surgical accuracy.
-          </p>
-          <ul class="mt-4 space-y-1.5 text-xs text-slate-400">
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> Same-day emergency tarping & sealing</li>
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> Honest assessments—no overselling</li>
-          </ul>
-        </div>
-
-        <!-- Service 5 -->
-        <div class="gloss-card rounded-2xl p-7 relative group">
-          <div class="w-12 h-12 rounded-xl bg-brand-orange/20 border border-brand-orange/40 flex items-center justify-center text-brand-orange text-xl mb-5 group-hover:scale-110 transition">
-            <i class="fa-solid fa-sun"></i>
-          </div>
-          <h3 class="text-white font-bold text-xl mb-2">Texas Cool Roofs & Metal</h3>
-          <p class="text-sm text-slate-300 leading-relaxed">
-            Beat the 105°F San Antonio summers. We install standing seam metal roofs and radiant barrier decking that dramatically reduce attic heat and lower your CPS Energy bill.
-          </p>
-          <ul class="mt-4 space-y-1.5 text-xs text-slate-400">
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> 50+ year standing seam metal</li>
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> Ridge vent & solar attic ventilation</li>
-          </ul>
-        </div>
-
-        <!-- Service 6 -->
-        <div class="gloss-card rounded-2xl p-7 relative group">
-          <div class="w-12 h-12 rounded-xl bg-brand-orange/20 border border-brand-orange/40 flex items-center justify-center text-brand-orange text-xl mb-5 group-hover:scale-110 transition">
-            <i class="fa-solid fa-building"></i>
-          </div>
-          <h3 class="text-white font-bold text-xl mb-2">Commercial & Multi-Family</h3>
-          <p class="text-sm text-slate-300 leading-relaxed">
-            Reliable flat roof solutions (TPO, EPDM, PVC, roof coatings) for local churches, commercial plazas, office buildings, and multi-family communities.
-          </p>
-          <ul class="mt-4 space-y-1.5 text-xs text-slate-400">
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> Commercial warranty options</li>
-            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-orange"></i> Minimal tenant disturbance</li>
-          </ul>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
   <!-- ==================== LEAD CAPTURE & INSPECTION BOOKING ==================== -->
-  <section id="estimate-form" class="py-20 section-smoky-mid relative overflow-hidden">
+  <section id="estimate-form" class="py-20 section-smoky-dark relative overflow-hidden">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
       <div class="gloss-card rounded-3xl p-8 sm:p-12 crisp-rim-orange relative">
@@ -1483,7 +1368,7 @@
   </section>
 
   <!-- ==================== FREQUENTLY ASKED QUESTIONS ==================== -->
-  <section id="faq" class="py-20 section-smoky-dark relative">
+  <section id="faq" class="py-20 section-smoky-mid relative">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
       <div class="text-center max-w-2xl mx-auto mb-12">
@@ -1577,10 +1462,10 @@
         <div class="md:col-span-3 space-y-3">
           <h4 class="text-white font-bold text-sm uppercase tracking-wider">Navigation</h4>
           <ul class="space-y-2 text-xs">
-            <li><a href="#projects" class="hover:text-brand-orange transition">Real Projects Gallery (10)</a></li>
-            <li><a href="#logo-story" class="hover:text-brand-orange transition">The Logo Story</a></li>
-            <li><a href="#services" class="hover:text-brand-orange transition">Hail & Storm Damage</a></li>
-            <li><a href="#services" class="hover:text-brand-orange transition">Full Roof Replacement</a></li>
+            <li><a href="#services" class="hover:text-brand-orange transition">Roofing Services</a></li>
+            <li><a href="#projects" class="hover:text-brand-orange transition">Field Projects Gallery (10)</a></li>
+            <li><a href="#process" class="hover:text-brand-orange transition">How We Work (4 Steps)</a></li>
+            <li><a href="#reviews" class="hover:text-brand-orange transition">Verified Reviews</a></li>
             <li><a href="#about-abraham" class="hover:text-brand-orange transition">Abraham Cruz & Community</a></li>
           </ul>
         </div>
@@ -1624,7 +1509,7 @@
     </div>
   </footer>
 
-  <!-- ==================== MOBILE FLOATING ACTION DOCK ==================== -->
+  <!-- ==================== MOBILE FLOATING ACTION DOCK (RHINO / BONDOC STYLE) ==================== -->
   <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-brand-navyDark/95 backdrop-blur-xl border-t border-white/15 px-4 py-3 flex items-center justify-between gap-3 shadow-2xl">
     <div class="flex items-center gap-2">
       <div class="w-9 h-9 rounded-xl bg-white p-1 flex items-center justify-center border border-brand-orange">
@@ -1752,39 +1637,6 @@
         updateEstimator();
       });
     });
-
-    // Hail Checklist Toggle
-    let checkedHailCount = 0;
-    function toggleHailItem(element) {
-      const checkbox = element.querySelector('.check-box');
-      const isChecked = checkbox.innerHTML.trim() !== '';
-
-      if (isChecked) {
-        checkbox.innerHTML = '';
-        element.classList.remove('border-brand-orange', 'bg-brand-orange/15');
-        element.classList.add('border-white/10');
-        checkedHailCount--;
-      } else {
-        checkbox.innerHTML = '<i class="fa-solid fa-check text-brand-orange"></i>';
-        element.classList.add('border-brand-orange', 'bg-brand-orange/15');
-        element.classList.remove('border-white/10');
-        checkedHailCount++;
-      }
-
-      const title = document.getElementById('hailScoreTitle');
-      const desc = document.getElementById('hailScoreDesc');
-
-      if (checkedHailCount === 0) {
-        title.textContent = '0 Warning Signs Selected';
-        desc.textContent = 'Click any signs above to see our expert recommendation.';
-      } else if (checkedHailCount <= 2) {
-        title.textContent = `${checkedHailCount} Warning Sign(s) Detected`;
-        desc.textContent = 'Moderate vulnerability. We recommend scheduling a free ground & drone photo inspection.';
-      } else {
-        title.textContent = `Urgent: ${checkedHailCount} Warning Signs!`;
-        desc.textContent = 'High probability of roof shingle compromise. Request inspection immediately before next rain.';
-      }
-    }
 
     // Modal & Form Handlers
     const confirmModal = document.getElementById('confirmModal');
