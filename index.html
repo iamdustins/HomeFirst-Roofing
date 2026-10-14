@@ -1673,16 +1673,16 @@
 
     // =========================================================================
     // GOOGLE SHEETS + EMAIL LEAD SUBMISSION HANDLER
-    // Paste your Google Apps Script Web App URL inside the quotes below!
-    // Follow GOOGLE_SHEETS_AND_HOSTING_GUIDE.md for the 3-minute setup.
     // =========================================================================
-    const GOOGLE_SHEETS_WEBHOOK_URL = ""; 
+    const GOOGLE_SHEETS_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbxtSpd-CvodhSB23mw4FXws-UUFGr9VfvGKdptgLSQpjBYDqDcXxWUs5d5AA9TwRh4a/exec"; 
 
     const confirmModal = document.getElementById('confirmModal');
+
     function showConfirmModal() {
       confirmModal.classList.remove('hidden');
       confirmModal.classList.add('flex');
     }
+
     function closeConfirmModal() {
       confirmModal.classList.add('hidden');
       confirmModal.classList.remove('flex');
@@ -1693,6 +1693,10 @@
       const form = e.target;
       const submitBtn = form.querySelector('button[type="submit"]');
       const originalBtnHTML = submitBtn.innerHTML;
+
+      // 1. Show loading state on button
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = `Submitting...`;
 
       const formData = new FormData(form);
       const payload = {
@@ -1706,27 +1710,26 @@
         notes: formData.get('notes') || ''
       };
 
-      submitBtn.disabled = true;
-      submitBtn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> <span>Sending Request...</span>';
-
       try {
-        if (GOOGLE_SHEETS_WEBHOOK_URL && GOOGLE_SHEETS_WEBHOOK_URL.trim() !== "") {
-          await fetch(GOOGLE_SHEETS_WEBHOOK_URL, {
-            method: 'POST',
-            mode: 'no-cors',
-            headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-            body: JSON.stringify(payload)
-          });
-        } else {
-          console.log('Lead captured locally (Connect GOOGLE_SHEETS_WEBHOOK_URL to send to Google Sheets):', payload);
-        }
-      } catch (err) {
-        console.error('Webhook error:', err);
+        // 2. Send payload to Google Apps Script Web App
+        await fetch(GOOGLE_SHEETS_WEBHOOK_URL, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'text/plain;charset=utf-8',
+          },
+          body: JSON.stringify(payload)
+        });
+
+        // 3. Reset form and display success modal
+        form.reset();
+        showConfirmModal();
+      } catch (error) {
+        console.error('Submission error:', error);
+        alert('There was an issue submitting your request. Please try calling directly or try again.');
       } finally {
+        // 4. Restore original button state
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalBtnHTML;
-        showConfirmModal();
-        form.reset();
       }
     }
 
