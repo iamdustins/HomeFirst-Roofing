@@ -5,3 +5,7 @@ dist/
 *.log
 .env
 .env.local
+Receipt_Namecheap.pdf
+OLD_index.html
+Images/
+*.jpeg
