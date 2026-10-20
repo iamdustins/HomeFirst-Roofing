@@ -1506,9 +1506,80 @@
   </div>
 
   <!-- ==================== BACK TO TOP FLOATING BUTTON ==================== -->
-  <button id="backToTopBtn" onclick="scrollToTop()" aria-label="Back to top" class="fixed bottom-20 right-4 sm:bottom-8 sm:right-8 z-40 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-brand-navyDark/75 hover:bg-brand-navyDark/95 text-white/80 hover:text-brand-orange border border-white/20 hover:border-brand-orange/60 backdrop-blur-md shadow-xl flex items-center justify-center transition-all duration-300 opacity-0 pointer-events-none translate-y-3 hover:scale-110 active:scale-95 group cursor-pointer">
+  <button id="backToTopBtn" onclick="scrollToTop()" aria-label="Back to top" class="fixed bottom-20 left-4 sm:bottom-24 sm:right-8.5 z-40 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-brand-navyDark/75 hover:bg-brand-navyDark/95 text-white/80 hover:text-brand-orange border border-white/20 hover:border-brand-orange/60 backdrop-blur-md shadow-xl flex items-center justify-center transition-all duration-300 opacity-0 pointer-events-none translate-y-3 hover:scale-110 active:scale-95 group cursor-pointer">
     <i class="fa-solid fa-chevron-up text-sm sm:text-base group-hover:-translate-y-0.5 transition-transform"></i>
   </button>
+
+
+  <!-- ==================== HOMEFIRST CHAT ASSISTANT WIDGET ==================== -->
+  <div id="chatWidgetContainer" class="fixed z-50 bottom-20 right-4 sm:bottom-8 sm:right-8 flex flex-col items-end">
+    
+    <!-- Proactive Desktop Greeting Tooltip Bubble -->
+    <div id="chatGreetingTooltip" class="mb-3 w-64 sm:w-72 p-3 bg-brand-navyDark/95 border border-white/20 rounded-2xl shadow-2xl backdrop-blur-xl text-left transition-all duration-300 transform opacity-0 translate-y-2 pointer-events-none hidden sm:block">
+      <div class="flex items-start gap-2.5">
+        <div class="w-8 h-8 rounded-lg bg-white p-1 shrink-0 border border-brand-orange/40 flex items-center justify-center">
+          <img src="assets/logo-crest.png" alt="Home First" class="w-full h-full object-contain">
+        </div>
+        <div class="flex-1">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-white">Abraham Cruz & Team</span>
+            <button onclick="dismissChatTooltip(event)" class="text-slate-400 hover:text-white text-base leading-none p-0.5" aria-label="Dismiss">&times;</button>
+          </div>
+          <p class="text-[11px] text-slate-300 mt-1 leading-snug">Have a roofing question or need a quick estimate? Chat with us live!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Interactive Chat Window -->
+    <div id="chatWindow" class="fixed z-50 bottom-20 sm:bottom-24 right-4 sm:right-8 w-[calc(100vw-2rem)] sm:w-[390px] h-[520px] max-h-[82vh] rounded-3xl bg-brand-navyDark/95 backdrop-blur-2xl border border-white/20 shadow-2xl flex flex-col overflow-hidden transition-all duration-300 transform scale-90 opacity-0 pointer-events-none origin-bottom-right">
+      
+      <!-- Chat Header -->
+      <div class="bg-brand-navyDeep/95 border-b border-white/10 px-4 py-3.5 flex items-center justify-between shrink-0">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-white p-1 border border-brand-orange/40 flex items-center justify-center shadow-sm shrink-0">
+            <img src="assets/logo-crest.png" alt="Home First" class="w-full h-full object-contain">
+          </div>
+          <div>
+            <h3 class="text-white font-bold text-sm leading-tight flex items-center gap-1.5">
+              <span>HomeFirst Assistant</span>
+              <span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[9px] bg-emerald-500/20 text-emerald-400 font-semibold border border-emerald-500/30">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Online
+              </span>
+            </h3>
+            <p class="text-[11px] text-slate-300">San Antonio Roof Restoration & Support</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-1">
+          <button onclick="resetChat()" title="Restart Conversation" class="w-8 h-8 rounded-lg text-slate-400 hover:text-white hover:bg-white/10 flex items-center justify-center transition text-xs">
+            <i class="fa-solid fa-rotate-right"></i>
+          </button>
+          <button onclick="toggleChatWindow()" title="Close Chat" class="w-8 h-8 rounded-lg text-slate-400 hover:text-white hover:bg-white/10 flex items-center justify-center transition text-sm">
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Scrollable Message Body -->
+      <div id="chatMessages" class="flex-1 overflow-y-auto p-4 space-y-3.5 text-xs sm:text-sm custom-scrollbar">
+        <!-- Messages rendered by JavaScript -->
+      </div>
+
+      <!-- Chat Input Form -->
+      <form id="chatInputForm" onsubmit="handleChatInputSubmit(event)" class="bg-brand-navyDeep/95 border-t border-white/10 p-3 flex items-center gap-2 shrink-0">
+        <input id="chatInput" type="text" placeholder="Type a roofing question..." autocomplete="off" class="flex-1 bg-black/40 border border-white/15 focus:border-brand-orange rounded-xl px-3.5 py-2.5 text-xs sm:text-sm text-white placeholder-slate-400 focus:outline-none transition">
+        <button type="submit" aria-label="Send message" class="btn-gloss-orange text-white w-9 h-9 rounded-xl flex items-center justify-center shrink-0 hover:scale-105 active:scale-95 transition">
+          <i class="fa-solid fa-arrow-up text-sm"></i>
+        </button>
+      </form>
+    </div>
+
+    <!-- Floating Launcher Button -->
+    <button id="chatToggleBtn" onclick="toggleChatWindow()" aria-label="Open HomeFirst Chat Assistant" class="w-13 h-13 sm:w-14 sm:h-14 rounded-full btn-gloss-orange text-white shadow-2xl shadow-brand-orange/40 flex items-center justify-center border-2 border-white/20 transition-all duration-200 hover:scale-105 active:scale-95 cursor-pointer relative group">
+      <span class="absolute top-0 right-0 w-3.5 h-3.5 rounded-full bg-emerald-400 border-2 border-brand-navyDark animate-pulse"></span>
+      <i id="chatIconClosed" class="fa-solid fa-comments text-xl sm:text-2xl transition-transform group-hover:scale-110"></i>
+      <i id="chatIconOpened" class="fa-solid fa-xmark text-xl sm:text-2xl hidden"></i>
+    </button>
+  </div>
 
   <!-- ==================== SUBMISSION CONFIRMATION MODAL ==================== -->
   <div id="confirmModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4">
@@ -1752,6 +1823,313 @@
     document.getElementById('mainBookingForm').addEventListener('submit', (e) => {
       handleLeadFormSubmit(e, 'Main 21-Point Inspection Form');
     });
+
+
+    // =========================================================================
+    // HOMEFIRST INTERACTIVE CHATBOT ASSISTANT
+    // =========================================================================
+    let isChatOpen = false;
+    let chatLeadSubmitted = false;
+
+    const chatWindow = document.getElementById('chatWindow');
+    const chatToggleBtn = document.getElementById('chatToggleBtn');
+    const chatIconClosed = document.getElementById('chatIconClosed');
+    const chatIconOpened = document.getElementById('chatIconOpened');
+    const chatMessages = document.getElementById('chatMessages');
+    const chatInput = document.getElementById('chatInput');
+    const chatGreetingTooltip = document.getElementById('chatGreetingTooltip');
+
+    // Show tooltip after 3.5 seconds on desktop
+    setTimeout(() => {
+      if (!isChatOpen && chatGreetingTooltip) {
+        chatGreetingTooltip.classList.remove('opacity-0', 'translate-y-2', 'pointer-events-none');
+        chatGreetingTooltip.classList.add('opacity-100', 'translate-y-0', 'pointer-events-auto');
+      }
+    }, 3500);
+
+    function dismissChatTooltip(e) {
+      if (e) e.stopPropagation();
+      if (chatGreetingTooltip) {
+        chatGreetingTooltip.classList.add('opacity-0', 'translate-y-2', 'pointer-events-none');
+        chatGreetingTooltip.classList.remove('opacity-100', 'translate-y-0', 'pointer-events-auto');
+      }
+    }
+
+    function toggleChatWindow() {
+      isChatOpen = !isChatOpen;
+      dismissChatTooltip();
+      
+      if (isChatOpen) {
+        chatWindow.classList.remove('scale-90', 'opacity-0', 'pointer-events-none');
+        chatWindow.classList.add('scale-100', 'opacity-100', 'pointer-events-auto');
+        chatIconClosed.classList.add('hidden');
+        chatIconOpened.classList.remove('hidden');
+        
+        // Initial greeting if empty
+        if (chatMessages.children.length === 0) {
+          renderInitialGreeting();
+        }
+        setTimeout(() => chatInput.focus(), 300);
+      } else {
+        chatWindow.classList.add('scale-90', 'opacity-0', 'pointer-events-none');
+        chatWindow.classList.remove('scale-100', 'opacity-100', 'pointer-events-auto');
+        chatIconClosed.classList.remove('hidden');
+        chatIconOpened.classList.add('hidden');
+      }
+    }
+
+    function scrollChatToBottom() {
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    function appendBotMessage(htmlContent) {
+      const msgDiv = document.createElement('div');
+      msgDiv.className = 'flex items-start gap-2.5';
+      msgDiv.innerHTML = `
+        <div class="w-7 h-7 rounded-lg bg-white p-0.5 border border-brand-orange/30 shrink-0 mt-0.5 flex items-center justify-center">
+          <img src="assets/logo-crest.png" alt="HF" class="w-full h-full object-contain">
+        </div>
+        <div class="bg-brand-navyLight/70 border border-white/10 rounded-2xl rounded-tl-sm p-3 text-slate-200 max-w-[85%] leading-relaxed shadow-sm">
+          ${htmlContent}
+        </div>
+      `;
+      chatMessages.appendChild(msgDiv);
+      scrollChatToBottom();
+    }
+
+    function appendUserMessage(text) {
+      const msgDiv = document.createElement('div');
+      msgDiv.className = 'flex items-start justify-end gap-2.5';
+      msgDiv.innerHTML = `
+        <div class="bg-brand-orange text-white rounded-2xl rounded-tr-sm px-3.5 py-2.5 max-w-[85%] leading-relaxed font-medium shadow-md shadow-brand-orange/20">
+          ${escapeHtml(text)}
+        </div>
+      `;
+      chatMessages.appendChild(msgDiv);
+      scrollChatToBottom();
+    }
+
+    function escapeHtml(str) {
+      const div = document.createElement('div');
+      div.textContent = str;
+      return div.innerHTML;
+    }
+
+    function renderInitialGreeting() {
+      const greetingHTML = `
+        <p class="font-semibold text-white">Hello! Welcome to Home First Roof LLC. 👋</p>
+        <p class="mt-1">I'm your guide to San Antonio roof restoration, leak repairs, and free inspections with Abraham Cruz.</p>
+        <p class="mt-2 text-slate-300 font-semibold">How can we help your home today?</p>
+        
+        <div class="mt-3 flex flex-wrap gap-1.5" id="chatChips">
+          <button onclick="handleChipClick('drone')" class="px-2.5 py-1.5 rounded-lg bg-white/10 hover:bg-brand-orange/30 border border-white/15 text-left text-xs font-semibold text-white transition">
+            🚁 Free 21-Point Drone Scan
+          </button>
+          <button onclick="handleChipClick('leak')" class="px-2.5 py-1.5 rounded-lg bg-white/10 hover:bg-brand-orange/30 border border-white/15 text-left text-xs font-semibold text-white transition">
+            ⛈️ Active Leak / Emergency
+          </button>
+          <button onclick="handleChipClick('insurance')" class="px-2.5 py-1.5 rounded-lg bg-white/10 hover:bg-brand-orange/30 border border-white/15 text-left text-xs font-semibold text-white transition">
+            📑 Insurance Claims Help
+          </button>
+          <button onclick="handleChipClick('cost')" class="px-2.5 py-1.5 rounded-lg bg-white/10 hover:bg-brand-orange/30 border border-white/15 text-left text-xs font-semibold text-white transition">
+            💰 Roof Cost Estimates
+          </button>
+          <button onclick="handleChipClick('call')" class="px-2.5 py-1.5 rounded-lg bg-white/10 hover:bg-brand-orange/30 border border-white/15 text-left text-xs font-semibold text-white transition">
+            📞 Speak Directly with Abraham
+          </button>
+        </div>
+      `;
+      appendBotMessage(greetingHTML);
+    }
+
+    function resetChat() {
+      chatMessages.innerHTML = '';
+      chatLeadSubmitted = false;
+      renderInitialGreeting();
+    }
+
+    function handleChipClick(topic) {
+      if (topic === 'drone') {
+        appendUserMessage('I want to book a Free 21-Point Drone Inspection.');
+        setTimeout(() => {
+          appendBotMessage(`
+            <p><strong class="text-white">Great choice!</strong> Our 21-point drone inspection uses high-resolution aerial imaging to inspect shingles, ridge vents, valley metal, chimney step-flashing, and deck integrity.</p>
+            <p class="mt-1">It's 100% free with zero sales pressure. Where should Abraham's team reach you?</p>
+            ${renderInlineLeadCard('Free 21-Point Drone Inspection')}
+          `);
+        }, 400);
+      } else if (topic === 'leak') {
+        appendUserMessage('I have an active roof leak or storm emergency.');
+        setTimeout(() => {
+          appendBotMessage(`
+            <p><strong class="text-amber-400">Emergency & Active Leaks:</strong> We offer 24/7 rapid storm dispatch across San Antonio, including emergency tarping and custom chimney/flashing repair.</p>
+            <div class="mt-2.5 flex flex-col gap-2">
+              <a href="tel:+12102511454" class="btn-gloss-orange text-white px-3 py-2 rounded-lg text-xs font-bold text-center flex items-center justify-center gap-1.5">
+                <i class="fa-solid fa-phone"></i> Call Abraham Now: (210) 251-1454
+              </a>
+            </div>
+            <p class="mt-2 text-slate-300">Or drop your number below and our dispatch coordinator will call you right away:</p>
+            ${renderInlineLeadCard('Emergency Leak Dispatch')}
+          `);
+        }, 400);
+      } else if (topic === 'insurance') {
+        appendUserMessage('Do you help with insurance claims for hail damage?');
+        setTimeout(() => {
+          appendBotMessage(`
+            <p><strong class="text-white">Yes, absolutely!</strong> Abraham Cruz and our master team have 30+ years of insurance restoration experience across Bexar, Comal, and Kendall counties.</p>
+            <p class="mt-1">We personally meet your insurance adjuster on the roof, provide timestamped drone evidence, and handle full Texas HB 2102 compliance so your only out-of-pocket is your deductible.</p>
+            ${renderInlineLeadCard('Insurance Claim Assistance')}
+          `);
+        }, 400);
+      } else if (topic === 'cost') {
+        appendUserMessage('How much does a roof replacement typically cost?');
+        setTimeout(() => {
+          appendBotMessage(`
+            <p><strong class="text-white">Transparent San Antonio Pricing:</strong> Most full residential roof replacements in our area range between <span class="text-brand-orange font-bold">$7,500 and $16,500</span> depending on square footage, pitch, and shingle tier (Architectural, Class 4 Impact Hail-Resistant, or Standing Seam Metal).</p>
+            <p class="mt-1">You can test our <a href="#estimator" onclick="toggleChatWindow()" class="text-brand-orange underline font-bold">Interactive Cost Estimator</a> right on this page, or we can measure your roof down to the inch for free via drone.</p>
+            ${renderInlineLeadCard('Roof Replacement Cost Estimate')}
+          `);
+        }, 400);
+      } else if (topic === 'call') {
+        appendUserMessage('Can I speak directly with Abraham Cruz?');
+        setTimeout(() => {
+          appendBotMessage(`
+            <p><strong class="text-white">Abraham Cruz</strong> is the founder of Home First Roof LLC and actively oversees our San Antonio installations.</p>
+            <div class="mt-2.5">
+              <a href="tel:+12102511454" class="btn-gloss-orange text-white px-3 py-2 rounded-lg text-xs font-bold text-center flex items-center justify-center gap-1.5">
+                <i class="fa-solid fa-phone"></i> Call Abraham: (210) 251-1454
+              </a>
+            </div>
+            <p class="mt-2 text-slate-300">Or request a personal callback:</p>
+            ${renderInlineLeadCard('Speak with Abraham Cruz')}
+          `);
+        }, 400);
+      }
+    }
+
+    function renderInlineLeadCard(intentTopic) {
+      if (chatLeadSubmitted) {
+        return `<p class="mt-2 text-emerald-400 font-semibold text-xs"><i class="fa-solid fa-check mr-1"></i> Your details are already received. Abraham's team will contact you shortly!</p>`;
+      }
+      return `
+        <form onsubmit="handleChatLeadSubmit(event, '${intentTopic}')" class="mt-2.5 p-3 rounded-xl bg-brand-navyDeep/90 border border-brand-orange/30 space-y-2">
+          <input type="text" name="chatName" placeholder="Your Name" required class="w-full px-2.5 py-1.5 rounded-lg bg-black/40 border border-white/15 text-xs text-white placeholder-slate-400 focus:outline-none focus:border-brand-orange">
+          <input type="tel" name="chatPhone" placeholder="Phone Number (e.g. 210-xxx-xxxx)" required class="w-full px-2.5 py-1.5 rounded-lg bg-black/40 border border-white/15 text-xs text-white placeholder-slate-400 focus:outline-none focus:border-brand-orange">
+          <input type="text" name="chatAddress" placeholder="Address or Neighborhood (optional)" class="w-full px-2.5 py-1.5 rounded-lg bg-black/40 border border-white/15 text-xs text-white placeholder-slate-400 focus:outline-none focus:border-brand-orange">
+          <button type="submit" class="w-full btn-gloss-orange text-white py-2 rounded-lg text-xs font-bold flex items-center justify-center gap-1.5 shadow-md">
+            <i class="fa-solid fa-paper-plane text-xs"></i>
+            <span>Submit to Abraham Cruz</span>
+          </button>
+        </form>
+      `;
+    }
+
+    async function handleChatLeadSubmit(e, intent) {
+      e.preventDefault();
+      const form = e.target;
+      const submitBtn = form.querySelector('button[type="submit"]');
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Submitting...';
+
+      const fullName = form.chatName.value;
+      const phone = form.chatPhone.value;
+      const address = form.chatAddress.value || 'Not specified (Chat)';
+
+      const payload = {
+        timestamp: new Date().toISOString(),
+        formSource: `Website Chat Assistant (${intent})`,
+        fullName: fullName,
+        phone: phone,
+        email: 'info@homefirstroof.com',
+        address: address,
+        service: intent,
+        notes: `Chat inquiry about ${intent}. Customer submitted directly through HomeFirst interactive chatbot.`
+      };
+
+      try {
+        await fetch(GOOGLE_SHEETS_WEBHOOK_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify(payload)
+        });
+
+        chatLeadSubmitted = true;
+        form.innerHTML = `
+          <div class="text-center py-2 text-emerald-400">
+            <i class="fa-solid fa-circle-check text-xl mb-1"></i>
+            <p class="font-bold text-xs text-white">Thank you, ${escapeHtml(fullName)}!</p>
+            <p class="text-[11px] text-slate-300 mt-0.5">Abraham or our dispatcher will call or text <strong class="text-white">${escapeHtml(phone)}</strong> shortly.</p>
+          </div>
+        `;
+      } catch (err) {
+        console.error('Chat lead error:', err);
+        form.innerHTML = `
+          <p class="text-xs text-brand-orange font-semibold">Please call directly at <a href="tel:+12102511454" class="underline">(210) 251-1454</a>!</p>
+        `;
+      }
+    }
+
+    function handleChatInputSubmit(e) {
+      e.preventDefault();
+      const text = chatInput.value.trim();
+      if (!text) return;
+
+      appendUserMessage(text);
+      chatInput.value = '';
+
+      const lower = text.toLowerCase();
+      setTimeout(() => {
+        // Keyword intelligence
+        if (lower.includes('hail') || lower.includes('storm') || lower.includes('wind')) {
+          appendBotMessage(`
+            <p><strong class="text-white">Hail & Storm Damage:</strong> San Antonio experiences heavy hail seasons that can bruise shingle fiberglass mats and loosen granulates without obvious leaks from the ground.</p>
+            <p class="mt-1">Abraham's team provides free drone scans to identify hidden hail impacts before your insurance filing deadline expires.</p>
+            ${renderInlineLeadCard('Hail Storm Inspection')}
+          `);
+        } else if (lower.includes('chimney') || lower.includes('flashing')) {
+          appendBotMessage(`
+            <p><strong class="text-white">Chimney & Flashing Specialists:</strong> Flashing around chimneys, valleys, and walls is the #1 leak culprit in Texas. In fact, Abraham Cruz's logo features a chimney because custom reglet counter-flashing is our master specialty!</p>
+            ${renderInlineLeadCard('Chimney & Flashing Repair')}
+          `);
+        } else if (lower.includes('cost') || lower.includes('price') || lower.includes('how much') || lower.includes('quote')) {
+          appendBotMessage(`
+            <p><strong class="text-white">Pricing & Quotes:</strong> Typical replacements in San Antonio run $7,500 to $16,500 depending on roof squares, pitch, and materials.</p>
+            <p class="mt-1">Would you like a complimentary 21-point drone assessment to get an exact dollar estimate?</p>
+            ${renderInlineLeadCard('Free Exact Cost Estimate')}
+          `);
+        } else if (lower.includes('insurance') || lower.includes('claim') || lower.includes('deductible')) {
+          appendBotMessage(`
+            <p><strong class="text-white">Insurance Assistance:</strong> We assist with filing, adjustor walkthroughs, and supplementals. Under Texas HB 2102, we follow all legal state regulations so your claim is processed smoothly.</p>
+            ${renderInlineLeadCard('Insurance Claim Guidance')}
+          `);
+        } else if (lower.includes('warranty') || lower.includes('guarantee')) {
+          appendBotMessage(`
+            <p><strong class="text-white">Industry-Leading Warranties:</strong> All our full replacements include transferable lifetime manufacturer warranties from GAF and Owens Corning, plus our dedicated HomeFirst craftsmanship guarantee.</p>
+            ${renderInlineLeadCard('Warranty & Service Details')}
+          `);
+        } else if (lower.includes('stone oak') || lower.includes('boerne') || lower.includes('alamo heights') || lower.includes('helotes') || lower.includes('area') || lower.includes('location')) {
+          appendBotMessage(`
+            <p><strong class="text-white">Service Area:</strong> We proudly serve all of San Antonio (Stone Oak, Alamo Heights, Medical Center, Northwest, South Side) as well as Boerne, Helotes, Schertz, Cibolo, and New Braunfels!</p>
+            ${renderInlineLeadCard('Check Service Availability')}
+          `);
+        } else if (lower.includes('abraham') || lower.includes('who') || lower.includes('owner')) {
+          appendBotMessage(`
+            <p><strong class="text-white">Abraham Cruz</strong> is the local owner and master roofer of Home First Roof LLC with over 30 years of combined family and crew experience right here in San Antonio.</p>
+            <p class="mt-1">He personally inspects jobs and believes in treating every homeowner like family.</p>
+            ${renderInlineLeadCard('Connect with Abraham Cruz')}
+          `);
+        } else {
+          // Helpful general fallback
+          appendBotMessage(`
+            <p><strong class="text-white">Thank you for asking!</strong></p>
+            <p class="mt-1">For specific questions about your roof structure, materials, or insurance, Abraham Cruz or a senior project manager can provide exact answers.</p>
+            <p class="mt-1">Feel free to call <a href="tel:+12102511454" class="text-brand-orange font-bold underline">(210) 251-1454</a> or leave your contact info below for a fast response:</p>
+            ${renderInlineLeadCard('General Roof Inquiry')}
+          `);
+        }
+      }, 500);
+    }
 
     // =========================================================================
     // BACK TO TOP SCROLL BUTTON
