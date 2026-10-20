@@ -1505,6 +1505,11 @@
     </div>
   </div>
 
+  <!-- ==================== BACK TO TOP FLOATING BUTTON ==================== -->
+  <button id="backToTopBtn" onclick="scrollToTop()" aria-label="Back to top" class="fixed bottom-20 right-4 sm:bottom-8 sm:right-8 z-40 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-brand-navyDark/75 hover:bg-brand-navyDark/95 text-white/80 hover:text-brand-orange border border-white/20 hover:border-brand-orange/60 backdrop-blur-md shadow-xl flex items-center justify-center transition-all duration-300 opacity-0 pointer-events-none translate-y-3 hover:scale-110 active:scale-95 group cursor-pointer">
+    <i class="fa-solid fa-chevron-up text-sm sm:text-base group-hover:-translate-y-0.5 transition-transform"></i>
+  </button>
+
   <!-- ==================== SUBMISSION CONFIRMATION MODAL ==================== -->
   <div id="confirmModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4">
     <div class="gloss-card max-w-md w-full rounded-2xl p-6 text-center border border-white/20">
@@ -1747,6 +1752,27 @@
     document.getElementById('mainBookingForm').addEventListener('submit', (e) => {
       handleLeadFormSubmit(e, 'Main 21-Point Inspection Form');
     });
+
+    // =========================================================================
+    // BACK TO TOP SCROLL BUTTON
+    // =========================================================================
+    const backToTopBtn = document.getElementById('backToTopBtn');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 350) {
+        backToTopBtn.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-3');
+        backToTopBtn.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
+      } else {
+        backToTopBtn.classList.add('opacity-0', 'pointer-events-none', 'translate-y-3');
+        backToTopBtn.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
+      }
+    });
+
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
   </script>
 </body>
 </html>
